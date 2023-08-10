@@ -1,0 +1,122 @@
+.img-logo {
+  width: 170px;
+  height: 140px;
+  padding-bottom: 0px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin-top: 80px;
+}
+.labelLogin {
+  color: #37474f;
+  font-family: Nunito;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+}
+.form-control {
+  padding: 10px 270px 10px 12px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  border: 1.5px solid var(--gray-gray-100, #d4d4d7);
+  background: var(--white, #fff);
+}
+.bg_login {
+  background-color: #f6f6f6;
+}
+.btn_login {
+  border: none;
+  border-radius: 8px;
+  background: var(--orange-orange-400, #ff9138);
+  box-shadow: 0px 0px 6px 0px #e7e9f2;
+  color: white;
+  display: flex;
+  width: 162px;
+  height: 40px;
+  padding: 10px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  font-family: Nunito;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  margin-top: 20px;
+  margin-left: 110px;
+}
+.form-group {
+  margin-top: 20px;
+}
+.forgotPassword {
+
+  color: var(--red, #e73f3f);
+  font-family: Nunito;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+}
+.bgLogin {
+  background-color: white;
+}
+.img_bgLogin {
+  width: 848px;
+  height: 810px;
+  flex-shrink: 0;
+}
+
+.bgLogin {
+  position: relative;
+}
+
+.img_bgLogin {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.bgLogin p {
+  margin: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.text1 {
+  color: var(--orange-orange-500, #ff7506);
+  text-align: center;
+  font-family: Nunito;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+  top: 50%;
+  transform: translate(0, -100%);
+}
+
+.text2 {
+  color: var(--orange-orange-500, #ff7506);
+  text-align: center;
+  font-family: Nunito;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 50px;
+  top: 50%;
+  transform: translate(10%, 0);
+}
+.forgotPassword1{
+margin-left: 145px;
+    color: var(--red, #e73f3f);
+  font-family: Nunito;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+}
