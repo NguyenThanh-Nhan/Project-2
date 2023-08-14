@@ -1,4 +1,3 @@
-// import { useDispatch } from "react-redux";
 import { group, logo } from "../../../assect/img";
 import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
@@ -61,29 +60,27 @@ function Login() {
                 <div className="form-group">
                   <label className="labelLogin">Tên đăng nhập *</label>
                   <Input
-                    type="text"
-                    className="form-control"
-                    id="username"
-                    autoComplete="off"
-                    status={error && "error"}
-                    placeholder="Nhập vào tài khoản"
-                    spellCheck={false}
+                    id="user-name"
                     value={userName}
                     onChange={(e) => handleChangeInput(e, "userName")}
+                    status={error && "error"}
+                    className="input"
+                    spellCheck={false}
+                    placeholder="Nhập vào tài khoản"
                   />
                 </div>
                 <div className="form-group">
                   <label className="labelLogin">Mật khẩu *</label>
-                  <Input
-                    type="password"
-                    className="form-control"
+
+                  <Input.Password
                     id="password"
-                    status={error && "error"}
-                    autoComplete="current-password"
-                    placeholder="Nhập vào mật khẩu"
+                    type="password"
                     value={password}
-                    spellCheck={false}
                     onChange={(e) => handleChangeInput(e, "password")}
+                    placeholder="Nhập vào mật khẩu"
+                    status={error && "error"}
+                    className="input"
+                    spellCheck={false}
                   />
                   {error ? (
                     <div className="error-message mt-3">

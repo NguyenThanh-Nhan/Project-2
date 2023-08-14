@@ -1,12 +1,13 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import {
   collection,
-  doc,
   getDocs,
+  addDoc,
+  doc,
   updateDoc,
 } from "firebase/firestore";
-import { db } from "../../firebase";
 import { IUpdateProps, IUser } from "../../interfaces";
+import { db } from "../../firebase";
 
 const initialState = {
   loading: false,
@@ -55,6 +56,15 @@ const UserSlice = createSlice({
       .addCase(CheckEmailExists.rejected, (state) => {
         state.loading = false;
       })
+      .addCase(addUser.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(addUser.fulfilled, (state) => {
+        state.loading = false;
+      })
+      .addCase(addUser.rejected, (state) => {
+        state.loading = false;
+      })
       .addCase(updateUser.pending, (state) => {
         state.loading = true;
       })
@@ -101,6 +111,17 @@ export const fetchAllUsers = createAsyncThunk("fetchAllUsers", async () => {
   return data.sort((a, b) => a.displayName.localeCompare(b.displayName));
 });
 
+export const addUser = createAsyncThunk("addUser", async (user: IUser) => {
+  let res;
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const docRef = await addDoc(collection(db, "users"), { ...user });
+    res = "success";
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
+  return res;
+});
 
 export const updateUser = createAsyncThunk(
   "updateUser",
@@ -116,6 +137,5 @@ export const updateUser = createAsyncThunk(
     return res;
   }
 );
-
 
 export default UserSlice;

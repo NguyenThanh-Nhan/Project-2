@@ -1,0 +1,70 @@
+.wrapper_notification {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  height: 526px;
+  background: #ffffff;
+  box-shadow: 2px 2px 15px rgba(70, 64, 67, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.header_notification {
+  display: flex;
+  align-items: center;
+  background-color: #ffa726;
+  color: #ffffff;
+  padding: 9px 24px;
+}
+.span_notification {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+}
+.list_notification {
+  overflow-y: overlay;
+}
+.card_notify {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 24px 12px;
+  transition: all linear 0.3s;
+}
+.card_notify:hover {
+  background-color: #fff3e0;
+  cursor: pointer;
+}
+.user_notify {
+  color: #bf5805;
+  font-weight: 700;
+}
+.time_notify {
+  font-weight: 400;
+  color: #535261;
+}
+.line_notify {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 320px;
+  height: 2px;
+  transform: translateX(-50%);
+  border-top: 1.5px solid #d4d4d7;
+  opacity: 0.6;
+}
+.card_notify:last-child .line {
+  display: none;
+}
+.list_notification::-webkit-scrollbar {
+  width: 12px;
+  border-radius: 0;
+  width: 8px;
+  height: 8px;
+}
+.list_notification::-webkit-scrollbar-thumb {
+  border-radius: 43px;
+  background-color: #ffc89b;
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+}

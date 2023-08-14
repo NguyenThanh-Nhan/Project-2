@@ -1,0 +1,71 @@
+.wrapper_profile {
+  display: flex;
+  gap: 24px;
+  margin-top: 80px;
+  margin-left: 24px;
+  padding: 40px 24px;
+  background-color: var(--white-color);
+  box-shadow: 0px 2px 6px rgba(219, 219, 219, 0.5);
+  border-radius: 12px;
+  width: 1600px;
+}
+.avatar_Profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18rem;
+  user-select: none;
+  font-weight: bold;
+  width: 248px;
+  height: 248px;
+  background-color: #ff7506;
+}
+.name {
+  font-weight: 700;
+  font-size: 240px;
+  margin: 20px 0 0;
+  text-align: center;
+}
+.wrap_avatar {
+  position: relative;
+}
+.icon_camera {
+  position: absolute;
+  bottom: 0;
+  right: 32px;
+}
+.user_info {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  gap: 0px 24px;
+}
+.wrap_info {
+  width: calc(50% - 12px);
+  height: fit-content;
+}
+.wrap_info input {
+  padding: 10px 16px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  border-radius: 6px;
+}
+.wrap-info .title {
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.span_profile {
+  font-weight: 700;
+  font-size: 8rem;
+  line-height: 30px;
+  text-align: center;
+}
+
+.name_profile {
+  font-weight: 700;
+  font-size: 24px;
+  margin: 20px 0 0;
+  text-align: center;
+}

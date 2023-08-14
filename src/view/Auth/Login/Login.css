@@ -20,16 +20,18 @@
   align-items: center;
   gap: 10px;
   border-radius: 8px;
-  border: 1.5px solid var(--gray-gray-100, #d4d4d7);
-  background: var(--white, #fff);
+  border: 1.5px solid #d4d4d7;
+  background: #ffffff;
+  font-weight: 300;
 }
 .bg_login {
   background-color: #f6f6f6;
+  min-height: 800px;
 }
 .btn_login {
   border: none;
   border-radius: 8px;
-  background: var(--orange-orange-400, #ff9138);
+  background: #ff9138;
   box-shadow: 0px 0px 6px 0px #e7e9f2;
   color: white;
   display: flex;
@@ -52,8 +54,7 @@
   margin-top: 20px;
 }
 .forgotPassword {
-
-  color: var(--red, #e73f3f);
+  color: #e73f3f;
   font-family: Nunito;
   font-size: 14px;
   font-style: normal;
@@ -88,7 +89,7 @@
 }
 
 .text1 {
-  color: var(--orange-orange-500, #ff7506);
+  color: #ff7506;
   text-align: center;
   font-family: Nunito;
   font-size: 34px;
@@ -100,7 +101,7 @@
 }
 
 .text2 {
-  color: var(--orange-orange-500, #ff7506);
+  color: #ff7506;
   text-align: center;
   font-family: Nunito;
   font-size: 36px;
@@ -110,13 +111,22 @@
   top: 50%;
   transform: translate(10%, 0);
 }
-.forgotPassword1{
-margin-left: 145px;
-    color: var(--red, #e73f3f);
+.forgotPassword1 {
+  margin-left: 145px;
+  color: #e73f3f;
   font-family: Nunito;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
   text-decoration: none;
+}
+.input{
+display: flex;
+width: 400px;
+height: 44px;
+padding: 10px 16px 10px 12px;
+justify-content: space-between;
+align-items: center;
+  
 }

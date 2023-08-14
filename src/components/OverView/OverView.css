@@ -1,0 +1,13 @@
+.wrapper_OverView {
+  height: 100%;
+  background-color: #ffffff;
+  padding: 16px 24px 30px;
+}
+.heading_OverView {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 3.6rem;
+  color: #ffa500;
+  margin-bottom: 16px;
+  display: block;
+}

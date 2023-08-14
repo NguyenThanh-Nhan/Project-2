@@ -1,22 +1,37 @@
-import { Route, Routes } from "react-router-dom";
-import Dashboard from "../view/Dashboard/Dashboard";
-import PayError from "../view/PayError";
+
+import config from "../config";
+import {
+  EmailForgotPassword,
+  ForgotPassword,
+} from "../config/lazyLoadedComponents";
+import MainLayout from "../layout/LayoutFirst";
+import LayoutSecond from "../layout/LayoutSecond";
 import Login from "../view/Auth/Login/Login";
-import EmailForgotPassword from "../view/Auth/EmailForgotPassword/EmailForgotPassword";
-import ForgotPassword from "../view/Auth/ForgotPassword/ForgotPassword";
+import Dashboard from "../view/Dashboard";
+import Profile from "../view/Profile";
+import RootPage from "../view/RootPage";
 
-const Routers: React.FC = () => {
-  return (
-    <Routes>
-      <Route path="/login" element={<Login />} />
-      <Route path="/" element={<Login />} />
-      <Route path="*" element={<PayError />} />
-      <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/payerror" element={<PayError />} />
-      <Route path="/emailforgotpassword" element={<EmailForgotPassword />} />
-      <Route path="/forgotpassword" element={<ForgotPassword />} />
-    </Routes>
-  );
-};
-
-export default Routers;
+export const routes = [
+  { path: config.routes.home, component: RootPage, layout: null },
+  { path: config.routes.login, component: Login, layout: null },
+  {
+    path: config.routes.emailForgotPassword,
+    component: EmailForgotPassword,
+    layout: null,
+  },
+  {
+    path: config.routes.forgotPassword,
+    component: ForgotPassword,
+    layout: null,
+  },
+  {
+    path: config.routes.dashboard,
+    component: Dashboard,
+    layout: LayoutSecond,
+  },
+  {
+    path: config.routes.profile,
+    component: Profile,
+    layout: MainLayout,
+  },
+];

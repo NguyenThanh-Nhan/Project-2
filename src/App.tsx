@@ -1,13 +1,41 @@
-import React from 'react';
-import './App.css';
-import Routers from "./routers/Routers";
+import { Routes, Route } from "react-router-dom";
+import { Fragment, Suspense } from "react";
+import { Spin } from "antd";
+import { routes } from "./routers/Routers";
 
 function App() {
   return (
-    <div className="wrapper">
-      <div className="app">
-        <Routers />
-      </div>
+    <div className="App">
+      <Routes>
+        {routes.map((route, index) => {
+          const Layout = route.layout ? route.layout : Fragment;
+          const Page = route.component;
+          return (
+            <Route
+              key={index}
+              path={route.path}
+              element={
+                <Layout>
+                  <Suspense
+                    fallback={
+                      <Spin
+                        style={{
+                          height: "100%",
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                        }}
+                      />
+                    }
+                  >
+                    <Page />
+                  </Suspense>
+                </Layout>
+              }
+            />
+          );
+        })}
+      </Routes>
     </div>
   );
 }

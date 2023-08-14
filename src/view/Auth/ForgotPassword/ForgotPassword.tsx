@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { updateUser } from "../../../redux/slices/UserSlice";
 import MessageNotify from "../../../components/Message";
 import { WarningIcon } from "../../../components/icons";
-import { Button } from "antd";
+import { Button, Input } from "antd";
 
 function ForgotPassword() {
   const { loading } = useSelector(userSelectors);
@@ -75,11 +75,10 @@ function ForgotPassword() {
                 </div>
                 <div className="form-group">
                   <label className="labelForgotPassword">Mật khẩu *</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="account"
-                    autoComplete="current-password"
+                  <Input.Password
+                    id="password"
+                    status={error && "error"}
+                    className="input"
                     value={password}
                     onChange={(e) => handleChangeInput(e, "password")}
                   />
@@ -88,11 +87,10 @@ function ForgotPassword() {
                   <label className="labelForgotPassword">
                     Nhập lại mật khẩu *
                   </label>
-                  <input
-                    type="password"
-                    className="form-control"
-                    id="pasword"
-                    autoComplete="current-password"
+                  <Input.Password
+                    id="confirm"
+                    status={error && "error"}
+                    className="input"
                     value={confirmPass}
                     onChange={(e) => handleChangeInput(e, "confirmPass")}
                   />

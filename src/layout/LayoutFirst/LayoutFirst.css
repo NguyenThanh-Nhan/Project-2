@@ -1,0 +1,13 @@
+.wrapper_Flayout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.left_Flayout {
+  width: 300px;
+}
+
+.right_Flayout {
+  flex: 1;
+  background-color: #f7f7f7;
+}
