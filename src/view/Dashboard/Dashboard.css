@@ -77,7 +77,7 @@
   border-radius: 10px;
 }
 .percent.reduce {
-  color: var(--red-color);
+  color: #e73f3f;
   background-color: rgba(231, 63, 63, 0.15);
 }
 .body {

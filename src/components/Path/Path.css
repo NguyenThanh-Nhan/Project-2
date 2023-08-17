@@ -1,3 +1,4 @@
+
 .btn-path {
     position: relative;
     display: inline-block;
@@ -5,6 +6,7 @@
     font-weight: 700;
     font-size: 20px;
     color: #7e7d88;
+    text-decoration: underline #fff2e7;
 }
 .btn-path:hover {
     color: #535261;

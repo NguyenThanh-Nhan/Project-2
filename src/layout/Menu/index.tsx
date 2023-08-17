@@ -39,7 +39,7 @@ function getItem(
 
 const items: MenuProps["items"] = [
   getItem("Dashboard", "/dashboard", <Element4 />),
-  getItem("Thiết bị", "/device", <Monitor />),
+  getItem("Thiết bị", "/device-list", <Monitor />),
   getItem("Dịch vụ", "/services", <ServiceIcon />),
   getItem("Cấp số", "/numerical-order", <DashboardIcon03 />),
   getItem("Báo cáo", "/report", <ReportIcon />),
@@ -67,7 +67,7 @@ function MenuNav() {
           ])
         );
         break;
-      case "/device":
+      case "/device-list":
         setSelected(pathname);
         dispatch(
           PathSlice.actions.setPath([

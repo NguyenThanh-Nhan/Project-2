@@ -54,66 +54,61 @@ function Login() {
             </div>
           </div>
           <div className="row mt-5">
-            <div className="col col-3"></div>
+            <div className="col-3"></div>
             <div className="col col-6">
-              <form>
-                <div className="form-group">
-                  <label className="labelLogin">Tên đăng nhập *</label>
-                  <Input
-                    id="user-name"
-                    value={userName}
-                    onChange={(e) => handleChangeInput(e, "userName")}
-                    status={error && "error"}
-                    className="input"
-                    spellCheck={false}
-                    placeholder="Nhập vào tài khoản"
-                  />
-                </div>
-                <div className="form-group">
-                  <label className="labelLogin">Mật khẩu *</label>
+              <div className="form-group">
+                <label className="labelLogin">Tên đăng nhập *</label>
+                <Input
+                  id="user-name"
+                  value={userName}
+                  onChange={(e) => handleChangeInput(e, "userName")}
+                  status={error && "error"}
+                  className="input_login"
+                  spellCheck={false}
+                  placeholder="Nhập vào tài khoản"
+                />
+              </div>
+              <div className="form-group">
+                <label className="labelLogin">Mật khẩu *</label>
 
-                  <Input.Password
-                    id="password"
-                    type="password"
-                    value={password}
-                    onChange={(e) => handleChangeInput(e, "password")}
-                    placeholder="Nhập vào mật khẩu"
-                    status={error && "error"}
-                    className="input"
-                    spellCheck={false}
-                  />
-                  {error ? (
-                    <div className="error-message mt-3">
-                      <WarningIcon />
-                      <span>{error}</span>
-                    </div>
-                  ) : (
-                    <Link
-                      to={"/emailForgotPassword"}
-                      className="forgotPassword"
-                    >
-                      Quên mật khẩu?
-                    </Link>
-                  )}
-                </div>
-                <Button
-                  className="btn_login"
-                  onClick={handleLogin}
-                  loading={loading}
-                >
-                  Đăng nhập
-                </Button>
-                {error && (
-                  <Link to={"/emailForgotPassword"} className="forgotPassword1">
+                <Input.Password
+                  id="password"
+                  type="password"
+                  value={password}
+                  onChange={(e) => handleChangeInput(e, "password")}
+                  placeholder="Nhập vào mật khẩu"
+                  status={error && "error"}
+                  className="input_login"
+                  spellCheck={false}
+                />
+                {error ? (
+                  <div className="error-message mt-3">
+                    <WarningIcon />
+                    <span>{error}</span>
+                  </div>
+                ) : (
+                  <Link to={"/emailForgotPassword"} className="forgotPassword">
                     Quên mật khẩu?
                   </Link>
                 )}
-              </form>
+              </div>
+              <Button
+                className="btn_login"
+                onClick={handleLogin}
+                loading={loading}
+              >
+                Đăng nhập
+              </Button>
+              {error && (
+                <Link to={"/emailForgotPassword"} className="forgotPassword1">
+                  Quên mật khẩu?
+                </Link>
+              )}
             </div>
             <div className="col-3"></div>
           </div>
         </div>
-        <div className="col col-7 bgLogin">
+        <div className="col-7 bgLogin">
           <img src={group} alt="" className="img_bgLogin" />
           <p className="text1">Hệ thống</p>
           <p className="text2">QUẢN LÝ XẾP HÀNG</p>

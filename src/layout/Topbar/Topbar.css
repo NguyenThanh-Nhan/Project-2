@@ -6,11 +6,12 @@
   justify-content: space-between;
   height: 88px;
   z-index: 1;
-
+  text-decoration: underline darkblue;
 }
 
 .path_Topbar {
   padding-left: 24px;
+
 }
 
 .user-wrap_Topbar {
@@ -65,37 +66,25 @@
   font-weight: 400;
   line-height: 1.8rem;
   color: #7e7d88;
-  text-decoration: none;
+  text-decoration: underline white;
 }
 
 .user-name_Topbar {
   font-weight: 700;
-  line-height: 2.4rem;
+  line-height: 1.5rem;
   color: #535261;
-  text-decoration: none;
+  text-decoration: underline white;
 }
 .d-flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-/* .btn-link {
-  display: inline-block;
-  text-decoration: none;
-  color: #4277ff;
-  outline: none;
-  border: none;
-  white-space: nowrap;
-  background-color: transparent;
-}
-.btn-link:hover {
-  cursor: pointer;
-  color: #4277ff;
-  text-decoration: none;
-} */
+
 .span_topbar {
-  text-decoration: none;
+  text-decoration: underline #ff7506;
 }
 .ant-avatar.ant-avatar-icon {
     font-size: 18px;
+    margin-top: -10px;
 }

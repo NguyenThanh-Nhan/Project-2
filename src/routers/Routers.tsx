@@ -1,8 +1,11 @@
-
 import config from "../config";
 import {
+  AddDevice,
+  DetailDevice,
   EmailForgotPassword,
   ForgotPassword,
+  ListDevice,
+  updateDevice,
 } from "../config/lazyLoadedComponents";
 import MainLayout from "../layout/LayoutFirst";
 import LayoutSecond from "../layout/LayoutSecond";
@@ -32,6 +35,27 @@ export const routes = [
   {
     path: config.routes.profile,
     component: Profile,
+    layout: MainLayout,
+  },
+//device
+  {
+    path: config.routes.deviceList,
+    component: ListDevice,
+    layout: MainLayout,
+  },
+  {
+    path: config.routes.addDevice,
+    component: AddDevice,
+    layout: MainLayout,
+  },
+  {
+    path: config.routes.updateDevice,
+    component: updateDevice,
+    layout: MainLayout,
+  },
+  {
+    path: config.routes.detailDevice,
+    component: DetailDevice,
     layout: MainLayout,
   },
 ];

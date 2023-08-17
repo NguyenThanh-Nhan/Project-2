@@ -1,0 +1,31 @@
+.wrapper_search {
+    position: relative;
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+.text-box_search {
+    width: 100%;
+    height: 51px;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    padding: 11px 40px 11px 12px;
+    border: 1.5px solid #d4d4d7;
+    caret-color: #ffac6a;
+    border-radius: 8px;
+    outline: none;
+    transition: all linear 0.3s;
+
+    &:focus {
+        border-color: #ffac6a;
+    }
+}
+.icon_search {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ff7506;
+    pointer-events: none;
+}

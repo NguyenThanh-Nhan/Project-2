@@ -1,6 +1,7 @@
 .wrapper_SLayout {
   display: flex;
   min-height: 100vh;
+  max-height: 810px;
 }
 .left_SLayout {
   width: 300px;
@@ -8,16 +9,16 @@
 .content_SLayout {
   background-color: #f7f7f7;
   width: 1200px;
+  padding-top: 88px;
 }
 .content,
 .right_SLayout {
   flex: 1;
-  /* margin-top: 20px; */
-  /* background-color: #FFF2E7; */
 }
 .center_SLayout {
   display: flex;
   position: relative;
+  top: calc(88px * -1);
 }
 .over-view_SLayout {
   width: 300px;

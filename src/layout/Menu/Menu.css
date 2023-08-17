@@ -1,6 +1,6 @@
 .wrapper_menu {
   width: 300px;
-  height: calc(100%);
+  height: calc(100% - 66px);
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,10 +1,17 @@
 const routes = {
   home: "/",
   login: "/login",
-  dashboard: "/dashboard",
   forgotPassword: "/forgotPassword",
   emailForgotPassword: "/emailForgotPassword",
-  profile:"/profile"
+  //
+  dashboard: "/dashboard",
+  //
+  profile: "/profile",
+  //
+  deviceList: "/device-list",
+  addDevice: "/device-list/add-device",
+  updateDevice: "/device-list/update-device",
+  detailDevice: "/device-list/detail-device",
 };
 
 export default routes;
