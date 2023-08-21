@@ -12,12 +12,12 @@ import {
   ServiceIcon,
   SettingIcon,
 } from "../../components/icons";
-import { useAppDispatch } from "../../redux/store";
-import config from "../../config";
+import { useAppDispatch } from "../../redux";
 import PathSlice from "../../redux/slices/PathSlice";
 import { logo } from "../../assect/img";
-import "./Menu.css"
+import "./Menu.css";
 import "./styleMenu.css";
+import config from "../../config/routes";
 
 type MenuItem = Required<MenuProps>["items"][number];
 
@@ -40,8 +40,8 @@ function getItem(
 const items: MenuProps["items"] = [
   getItem("Dashboard", "/dashboard", <Element4 />),
   getItem("Thiết bị", "/device-list", <Monitor />),
-  getItem("Dịch vụ", "/services", <ServiceIcon />),
-  getItem("Cấp số", "/numerical-order", <DashboardIcon03 />),
+  getItem("Dịch vụ", "/service-list", <ServiceIcon />),
+  getItem("Cấp số", "/number-list", <DashboardIcon03 />),
   getItem("Báo cáo", "/report", <ReportIcon />),
   getItem("Cài đặt hệ thống", "Cài đặt hệ thống", <SettingIcon />, [
     getItem("Quản lý vai trò", "/settings/role-management"),
@@ -77,11 +77,12 @@ function MenuNav() {
             },
             {
               name: "Danh sách thiết bị",
+          link: config.routes.listDevice
             },
           ])
         );
         break;
-      case "/services":
+      case "/service-list":
         setSelected(pathname);
         dispatch(
           PathSlice.actions.setPath([
@@ -91,12 +92,12 @@ function MenuNav() {
             },
             {
               name: "Danh sách dịch vụ",
-              link: "",
+              link: config.routes.listService,
             },
           ])
         );
         break;
-      case "/numerical-order":
+      case "/number-list":
         setSelected(pathname);
         dispatch(
           PathSlice.actions.setPath([
@@ -106,7 +107,7 @@ function MenuNav() {
             },
             {
               name: "Danh sách cấp số",
-              link: "",
+              link: config.routes.listNumber,
             },
           ])
         );

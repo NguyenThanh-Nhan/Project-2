@@ -1,8 +1,8 @@
 import { Avatar, Input, Typography } from "antd";
 import { useSelector } from "react-redux";
-import { userSelectors } from "../../redux/selectors";
 import { CameraIcon } from "../../components/icons";
 import "./Profile.css";
+import { userSelectors } from "../../redux";
 
 function Profile() {
   const { currentUser } = useSelector(userSelectors);

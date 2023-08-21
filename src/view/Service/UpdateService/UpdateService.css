@@ -1,0 +1,124 @@
+.wrapper_serviceU {
+  padding: 0 24px;
+}
+.heading_serviceU {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  color: #ff7506;
+  margin: 16px 0;
+}
+.wrap-content_serviceU {
+  padding: 16px 24px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 8px rgba(232, 239, 244, 0.8);
+  border-radius: 16px;
+}
+.sub-heading_serviceU {
+  color: #ff7506;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 3rem;
+  margin-bottom: 12px;
+  margin-top: 16px;
+}
+.wrap-text-box_serviceU {
+  display: flex;
+  gap: 24px;
+}
+.text-box-item_serviceU {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+}
+.title_serviceU {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 2rem;
+  margin-bottom: 4px;
+}
+.required_serviceU {
+  height: 18px;
+  color: #e73f3f;
+}
+.desc-box_serviceU {
+  flex: 1;
+  resize: none;
+}
+.setting-role_serviceU {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.auto-increase_serviceU {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.check-box_serviceU {
+  min-width: 135px;
+}
+.number-box_serviceU {
+  width: 61px;
+  height: 44px;
+  padding: 10px;
+}
+.number-box_serviceU::-webkit-outer-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+}
+.number-box_serviceU::-webkit-inner-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+}
+.wrap-check-box_serviceU {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.note_serviceU {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 18px;
+}
+.text_serviceU {
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+.wrap-button_serviceU {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+.btn-cancel_serviceU {
+  width: 147px;
+  height: 48px;
+  padding: 12px;
+  text-align: center;
+  line-height: 22px;
+  color: #ffac6a;
+    background-color: #ffffff;
+    border: 1.5px solid #ffac6a;
+    border-radius: 8px;
+}
+.btn-add_serviceU {
+  width: 147px;
+  height: 48px;
+  padding: 12px;
+  text-align: center;
+  line-height: 22px;
+  background-color: #ffac6a;
+    color: #ffffff;
+}
+.ant-input {
+  min-height: 51px;
+}

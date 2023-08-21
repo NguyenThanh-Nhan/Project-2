@@ -1,0 +1,147 @@
+.wrapper_serviceA {
+  padding: 0 24px;
+}
+
+.heading_serviceA {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: #ff7506;
+  margin: 16px 0;
+}
+.title_serviceA {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 2rem;
+  margin-bottom: 4px;
+}
+.d-flex {
+  display: flex;
+}
+
+.gap-24 {
+  gap: 24px;
+}
+.add-service-wrap .title {
+  margin-bottom: 8px;
+}
+.wrap-content_serviceA {
+  padding: 16px 24px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 8px rgba(232, 239, 244, 0.8);
+  border-radius: 16px;
+}
+.sub-heading_serviceA {
+  color: #ff7506;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 3rem;
+  margin-bottom: 12px;
+  margin-top: 16px;
+}
+.wrap-text-box_serviceA {
+  display: flex;
+  gap: 24px;
+}
+
+.wrap-text-box_serviceA .text-box-item_serviceA {
+  display: flex;
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.text-box-required_serviceA {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+}
+.desc-box_serviceA {
+  flex: 1;
+  resize: none;
+}
+.required_serviceA {
+  height: 18px;
+  color: red;
+}
+.setting-role_serviceA {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.number-box_serviceA {
+  width: 61px;
+  height: 44px;
+  padding: 10px;
+}
+.number-box_serviceA::-webkit-outer-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+}
+.number-box_serviceA::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.auto-increase_serviceA {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.wrap-check-box_serviceA {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.check-box_serviceA {
+  min-width: 135px;
+}
+.note_serviceA {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 18px;
+}
+.text_serviceA {
+  font-weight: 400;
+  font-size: 1rem;
+}
+.wrap-button_serviceA {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+.btn-cancel_serviceA {
+  width: 147px;
+  height: 48px;
+  padding: 12px;
+  text-align: center;
+  line-height: 22px;
+  color: #ffac6a;
+  background-color: #ffffff;
+  border: 1.5px solid #ffac6a;
+  border-radius: 8px;
+}
+.btn-add_serviceA {
+  width: 147px;
+  height: 48px;
+  padding: 12px;
+  text-align: center;
+  line-height: 22px;
+  background-color: #ffac6a;
+  color: #ffffff;
+  border-radius: 8px;
+}
+.ant-input-affix-wrapper, .ant-input {
+   min-height: 51px;
+}
+.wrap-text-box_serviceA .text-box-item_serviceA {
+    gap: 2px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}

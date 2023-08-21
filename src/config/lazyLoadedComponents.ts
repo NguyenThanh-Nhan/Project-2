@@ -20,3 +20,32 @@ export const updateDevice = React.lazy(
   () => import("./../view/Device/UpdateDevice")
 );
 export const AddDevice = React.lazy(() => import("./../view/Device/AddDevice"));
+
+// service 
+export const ListService = React.lazy(
+  () => import("./../view/Service/ListService")
+);
+export const AddService = React.lazy(
+  () => import("./../view/Service/AddService")
+);
+export const UpdateService = React.lazy(
+  () => import("./../view/Service/UpdateService")
+);
+export const DetailService = React.lazy(
+  () => import("./../view/Service/DetailService")
+);
+
+export const Number = React.lazy(
+  () => import("./../view/NumberOrder/ListNumber")
+);
+
+
+export const AddNumber = React.lazy(
+  () => import("./../view/NumberOrder/AddNumber")
+);
+
+export const DetailNumber = React.lazy(
+  () => import("./../view/NumberOrder/DetailNumber")
+);
+
+

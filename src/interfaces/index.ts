@@ -1,3 +1,5 @@
+import { Timestamp } from "firebase/firestore";
+
 export interface IUser {
   key?: string;
   _id: string;
@@ -10,6 +12,12 @@ export interface IUser {
   role: string;
   status?: string;
 }
+
+export interface IDropdown {
+  label: string;
+  value: string;
+}
+
 export interface IUpdateProps {
   id: string;
   payload: any;
@@ -45,4 +53,42 @@ export interface IDevice {
   serviceUse?: string;
   statusActive?: string;
   statusConnect?: string;
+}
+// interface service
+export interface IService {
+  key?: string;
+  _id: string;
+  serviceCode: string;
+  serviceName: string;
+  description?: string;
+  status?: string;
+  autoIncrement?: {
+    checked?: boolean;
+    from?: string;
+    to?: string;
+  };
+  prefix?: {
+    checked?: boolean;
+    value?: string;
+  };
+  surfix?: {
+    checked?: boolean;
+    value?: string;
+  };
+  reset?: boolean;
+}
+// interface numerical
+export interface INumerical {
+  key?: string;
+  _id?: string;
+  serviceCode?: string;
+  stt: string;
+  clientName: string | undefined;
+  service: string;
+  createdAt: Timestamp;
+  expired: Timestamp;
+  resource: string;
+  status: string;
+  phone?: string;
+  email?: string;
 }

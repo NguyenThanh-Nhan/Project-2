@@ -1,0 +1,38 @@
+.ant-picker {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+.ant-picker-input {
+  background: #ffffff;
+  border: 1.5px solid #d4d4d7;
+  border-radius: 8px;
+}
+
+.ant-picker-input::before {
+  background: #ffffff;
+  border: 1.5px solid #d4d4d7;
+  border-radius: 8px;
+  position: absolute;
+  content: url(/src/assect/img/calendar.png);
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  line-height: 0;
+}
+
+.ant-picker .ant-picker-input > input {
+  border-radius: 8px;
+  padding: 8px 16px 8px 36px;
+  width: 147px;
+  height: 51px;
+}
+
+.ant-picker-range.ant-picker-focused .ant-picker-active-bar {
+  opacity: 0;
+}
+
+.ant-picker-focused {
+  box-shadow: none;
+}

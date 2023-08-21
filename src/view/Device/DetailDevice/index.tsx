@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { deviceSelectors } from "../../../redux/selectors";
-import { useAppDispatch } from "../../../redux/store";
+import { deviceSelectors, useAppDispatch } from "../../../redux";
 import { EditSquare } from "../../../components/icons";
-import config from "../../../config";
 import PathSlice from "../../../redux/slices/PathSlice";
 import "./DetailDevice.css";
+import config from "../../../config/routes";
 
 function DetailDevice() {
   const { detailDevice } = useSelector(deviceSelectors);

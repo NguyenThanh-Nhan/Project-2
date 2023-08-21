@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
 import Tippy from "@tippyjs/react/headless";
 import { collection, onSnapshot } from "firebase/firestore";
-import { useAppDispatch } from "../../../redux/store";
+import { deviceSelectors, useAppDispatch } from "../../../redux";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { deviceSelectors } from "../../../redux/selectors";
 import { IDevice } from "../../../interfaces";
 import deviceSlice, { fetchAllDevice } from "../../../redux/slices/DeviceSlice";
 import { db } from "../../../firebase";
@@ -14,7 +13,7 @@ import Search from "../../../components/Search";
 import { AddSquare } from "../../../components/icons";
 import PathSlice from "../../../redux/slices/PathSlice";
 import "./ListDevice.css";
-import config from "../../../config";
+import config from "../../../config/routes";
 
 const statusActive = [
   {

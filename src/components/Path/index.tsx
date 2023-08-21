@@ -1,10 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useAppDispatch } from "../../redux/store";
+import { pathSelectors, useAppDispatch } from "../../redux";
 import PathSlice from "../../redux/slices/PathSlice";
 import { useSelector } from "react-redux";
-import { pathSelectors } from "../../redux/selectors";
-import "./Path.css"
+import "./Path.css";
 
 function Path() {
   const { path } = useSelector(pathSelectors);

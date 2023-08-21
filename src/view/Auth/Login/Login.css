@@ -121,12 +121,12 @@
   line-height: 20px;
   text-decoration: none;
 }
-.input{
-display: flex;
-width: 400px;
-height: 44px;
-padding: 10px 16px 10px 12px;
-justify-content: space-between;
-align-items: center;
-  
+.input_login {
+  display: flex;
+  width: 400px;
+  height: 51px;
+  padding: 10px 16px 10px 12px;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px darkblue;
 }

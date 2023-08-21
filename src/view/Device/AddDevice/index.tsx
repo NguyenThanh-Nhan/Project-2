@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import { Input, notification } from "antd";
 import { useState } from "react";
-import { useAppDispatch } from "../../../redux/store";
+import { useAppDispatch } from "../../../redux";
 import PathSlice from "../../../redux/slices/PathSlice";
 import { addDevice } from "../../../redux/slices/DeviceSlice";
 import { IDevice } from "../../../interfaces";
 import Dropdown from "../../../components/Dropdown";
-import "./AddDevice.css"
+import "./AddDevice.css";
 
 const items = [
   {
@@ -93,8 +93,8 @@ function AddDevice() {
       notification.error({
         message: (
           <p>
-            Các trường dấu <span className="required_detailA">*</span> là trường thông
-            tin bắt buộc
+            Các trường dấu <span className="required_detailA">*</span> là trường
+            thông tin bắt buộc
           </p>
         ),
         placement: "topRight",

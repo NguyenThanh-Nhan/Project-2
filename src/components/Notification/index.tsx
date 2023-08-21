@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
 import CardNotify from "./CardNotify";
 import "./Notification.css";
-import { userSelectors } from "../../redux/selectors";
 import { convertTimeToString } from "../../utils/utils";
+import { userSelectors } from "../../redux";
 
 const data: number[] = [];
 for (let i = 0; i < 10; i++) {
