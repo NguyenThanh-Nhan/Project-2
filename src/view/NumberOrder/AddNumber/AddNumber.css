@@ -1,0 +1,109 @@
+.wrapper_numberA {
+  padding: 16px 24px;
+}
+.heading_numberA {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  color: #ff7506;
+  margin-bottom: 20px;
+}
+.wrap-content_numberA {
+  height: 604px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 8px rgba(232, 239, 244, 0.8);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+}
+.sub-heading_numberA {
+  color: #ff7506;
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 4.8rem;
+  margin-bottom: 20px;
+}
+.selected-service_numberA {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: #535261;;
+}
+.dropdown-service_numberA {
+  width: 400px;
+  margin: 12px auto 80px;
+}
+
+.btn-cancel_numberA {
+  width: 115px;
+  height: 48px;
+  margin-right: 32px;
+  color: #ffac6a;
+    background-color: #ffffff;
+    border: 1.5px solid #ffac6a;
+}
+.btn-print_numberA {
+  width: 115px;
+  height: 48px;
+  background-color: #ffac6a;
+    color: #ffffff;
+}
+.modal_numberA {
+  border-radius: 24px;
+  width: fit-content !important;
+  height: fit-content !important;
+  overflow: hidden;
+}
+.wrap-modal_numberA {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 469px;
+  height: 385px;
+  margin: -24px;
+}
+.closed-btn_numberA {
+  position: absolute;
+  display: block;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+}
+.body-modal_numberA {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 44px 24px;
+}
+
+.header-title_numberA {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2rem;
+  color: #535261;;
+}
+.number_numberA {
+  font-weight: 600;
+  font-size: 4rem;
+  line-height: 2rem;
+  color: #ff7506;
+}
+.selected_numberA {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 2rem;
+  color: #282739;
+}
+.footer-modal_numberA {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #ffffff;
+  background-color: #ff7506;
+  padding: 16px 24px;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
