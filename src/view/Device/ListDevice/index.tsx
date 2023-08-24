@@ -10,10 +10,10 @@ import { db } from "../../../firebase";
 import Dropdown from "../../../components/Dropdown";
 import Table from "../../../components/Table";
 import Search from "../../../components/Search";
-import { AddSquare } from "../../../components/icons";
 import PathSlice from "../../../redux/slices/PathSlice";
 import "./ListDevice.css";
 import config from "../../../config/routes";
+import { AddSquare } from "../../../assect/img/1index";
 
 const statusActive = [
   {
@@ -242,7 +242,7 @@ function ListDevice() {
           }
           className="wrap-btn_LDevice"
         >
-          <AddSquare />
+          <img src={AddSquare} alt="" />
           <span>Thêm thiết bị</span>
         </Link>
       </div>

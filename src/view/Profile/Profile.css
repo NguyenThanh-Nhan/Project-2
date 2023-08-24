@@ -9,7 +9,7 @@
   border-radius: 12px;
   width: 1600px;
 }
-.avatar_Profile {
+.avatar_profile {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,43 +21,43 @@
   background-color: #ff7506;
 }
 .name_profile {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 240px;
   margin: 20px 0 0;
   text-align: center;
 }
-.wrap_avatar {
+.wrap_avatar_profile {
   position: relative;
 }
-.icon_camera {
+.icon_camera_profile {
   position: absolute;
   bottom: 0;
   right: 32px;
 }
-.user_info {
+.user_info_profile {
   display: flex;
   flex-wrap: wrap;
   flex: 1;
   gap: 0px 24px;
 }
-.wrap_info {
+.wrap_info_profile {
   width: calc(50% - 12px);
   height: fit-content;
 }
-.wrap_info input {
+.wrap_info_profile input {
   padding: 10px 16px;
   font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-  border-radius: 6px;
+  font-size: 1rem;
+  line-height: 2rem;
+  border-radius: 8px;
 }
-.wrap-info .title {
+.wrap-info_profile .title_profile {
   display: inline-block;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 8px;
 }
 .span_profile {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 8rem;
   line-height: 30px;
   text-align: center;
@@ -68,4 +68,8 @@
   font-size: 24px;
   margin: 20px 0 0;
   text-align: center;
+}
+.title_profile{
+  font-weight: 400;
+  font-size: 1rem;
 }

@@ -1,4 +1,4 @@
-import { SearchIcon } from "../icons";
+import { SearchIcon } from "../../assect/img/1index";
 import "./Search.css";
 
 type SearchProps = {
@@ -26,7 +26,7 @@ function Search({
         onChange={onChange}
         {...props}
       />
-      <SearchIcon className="icon_search" />
+      <img src={SearchIcon} alt="" className="icon_search" />
     </div>
   );
 }

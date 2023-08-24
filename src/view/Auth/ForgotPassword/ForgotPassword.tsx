@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { group2, logo } from "../../../assect/img";
+import { group2, logo } from "../../../assect/img/1index";
 import "./ForgotPassword.css";
 import { useSelector } from "react-redux";
 import { useAppDispatch, userSelectors } from "../../../redux";
 import { useNavigate } from "react-router-dom";
 import { updateUser } from "../../../redux/slices/UserSlice";
 import MessageNotify from "../../../components/Message";
-import { WarningIcon } from "../../../components/icons";
 import { Button, Input } from "antd";
+import { WarningIcon } from "../../../components/icons";
 
 function ForgotPassword() {
   const { loading } = useSelector(userSelectors);
@@ -98,7 +98,6 @@ function ForgotPassword() {
                   {error && (
                     <>
                       <WarningIcon />
-                      {error}
                     </>
                   )}
                 </div>

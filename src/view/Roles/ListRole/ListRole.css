@@ -1,0 +1,53 @@
+.wrapper_roleL {
+  padding: 16px 24px;
+}
+.header_roleL {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  margin-right: 104px;
+}
+.heading_roleL {
+  color: #ff7506;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+.search_roleL {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 240px;
+}
+.title_roleL {
+  color: #282739;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+.wrap_roleL {
+  position: relative;
+  padding-right: 104px;
+}
+.addRole-btn_roleL {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+  padding: 12px 4px;
+  gap: 4px;
+  top: 0;
+  right: -24px;
+  background: #eaeaec;
+  box-shadow: 0px 0px 6px #e7e9f2;
+  border-radius: 8px 0px 0px 8px;
+}
+.addRole-btn_roleL span {
+  color: #ff7506;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+  text-decoration: underline#eaeaec;
+}

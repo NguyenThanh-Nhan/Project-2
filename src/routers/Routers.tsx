@@ -1,6 +1,7 @@
 import {
   AddDevice,
   AddNumber,
+  AddRoleRole,
   AddService,
   DetailDevice,
   DetailNumber,
@@ -8,8 +9,11 @@ import {
   EmailForgotPassword,
   ForgotPassword,
   ListDevice,
+  ListRole,
   ListService,
   Number,
+  Report,
+  UpdateRole,
   UpdateService,
   updateDevice,
 } from "../config/lazyLoadedComponents";
@@ -103,4 +107,30 @@ export const routes = [
     component: DetailNumber,
     layout: MainLayout,
   },
+
+  //report
+  {
+    path: config.routes.report,
+    component: Report,
+    layout: MainLayout,
+  },
+
+  //role
+
+  {
+    path: config.routes.listRole,
+    component: ListRole,
+    layout: MainLayout,
+  },
+  {
+    path: config.routes.addRole,
+    component: AddRoleRole,
+    layout: MainLayout,
+  },
+  {
+    path: config.routes.updateRole,
+    component: UpdateRole,
+    layout: MainLayout,
+  },
+
 ];

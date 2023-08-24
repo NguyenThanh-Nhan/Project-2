@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { group2, logo } from "../../../assect/img";
+import {  group2, logo } from "../../../assect/img/1index";
 import "./EmailForgotPassword.css";
 import { useEffect } from "react";
 import UserSlice, { CheckEmailExists } from "../../../redux/slices/UserSlice";

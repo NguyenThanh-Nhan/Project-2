@@ -7,13 +7,13 @@ import Search from "../../../components/Search";
 import { db } from "../../../firebase";
 import DateRangePicker from "../../../components/DateRangePicker";
 import Table from "../../../components/Table";
-import { AddSquare } from "../../../components/icons";
 import PathSlice from "../../../redux/slices/PathSlice";
 import config from "../../../config/routes";
 import "./ListService.css";
 import { useSelector } from "react-redux";
 import serviceSlice, { fetchAllService} from "../../../redux/slices/ServiceSlice";
 import { serviceSelectors, useAppDispatch } from "../../../redux";
+import { AddSquare } from "../../../assect/img/1index";
 
 const statusActive = [
   {
@@ -159,8 +159,7 @@ function Service() {
           to={config.routes.addService}
           className="wrap-btn_serviceL"
         >
-          <AddSquare />
-          <span>Thêm dịch vụ</span>
+          <img src={AddSquare} alt="" /> <span>Thêm dịch vụ</span>
         </Link>
       </div>
     </div>

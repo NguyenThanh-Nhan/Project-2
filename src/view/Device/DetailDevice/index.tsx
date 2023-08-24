@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { deviceSelectors, useAppDispatch } from "../../../redux";
-import { EditSquare } from "../../../components/icons";
 import PathSlice from "../../../redux/slices/PathSlice";
 import "./DetailDevice.css";
 import config from "../../../config/routes";
+import { EditSquare } from "../../../assect/img/1index";
 
 function DetailDevice() {
   const { detailDevice } = useSelector(deviceSelectors);
@@ -56,7 +56,7 @@ function DetailDevice() {
           to={config.routes.updateDevice}
           className="wrap-btn_detailD"
         >
-          <EditSquare />
+          <img src={EditSquare} alt="" />
           <span>Cập nhật thiết bị</span>
         </Link>
       </div>

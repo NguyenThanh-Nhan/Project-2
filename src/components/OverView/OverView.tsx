@@ -1,9 +1,8 @@
 import Calendar from "../Calendar";
 import { IOverview } from "../../interfaces";
 import CardOverview from "./CardOverView";
-import { DashboardIcon03, Monitor, ServiceIcon } from "../icons";
-import "./OverView.css"
-
+import "./OverView.css";
+import { DashboardIcon03, Monitor, ServiceIcon } from "../../assect/img/1index";
 
 const fakeData: IOverview[] = [
   {
@@ -17,7 +16,9 @@ const fakeData: IOverview[] = [
     status2: "Ngưng hoạt động",
     number1: "3.799",
     number2: "422",
-    icon: <Monitor style={{ stroke: "#FF7506", width: "14px" }} />,
+    icon: (
+      <img src={Monitor} alt="" style={{ color: "#4277FF", width: "14px" }} />
+    ),
   },
   {
     name: "Dịch vụ",
@@ -30,7 +31,13 @@ const fakeData: IOverview[] = [
     status2: "Ngưng hoạt động",
     number1: "210",
     number2: "66",
-    icon: <ServiceIcon style={{ color: "#4277FF", width: "14px" }} />,
+    icon: (
+      <img
+        src={ServiceIcon}
+        alt=""
+        style={{ color: "#4277FF", width: "14px" }}
+      />
+    ),
   },
   {
     name: "Cấp số",
@@ -47,7 +54,13 @@ const fakeData: IOverview[] = [
     number1: "3.721",
     number2: "486",
     number3: "32",
-    icon: <DashboardIcon03 style={{ color: "#35C75A", width: "14px" }} />,
+    icon: (
+      <img
+        src={DashboardIcon03}
+        alt=""
+        style={{ color: "#4277FF", width: "14px" }}
+      />
+    ),
   },
 ];
 

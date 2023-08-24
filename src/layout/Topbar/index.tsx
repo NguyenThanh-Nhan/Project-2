@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 import { Button, Avatar } from "antd";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { NotificationIcon } from "../../components/icons";
 import { useAppDispatch, userSelectors } from "../../redux";
 import PathSlice from "../../redux/slices/PathSlice";
 import Tippy from "@tippyjs/react";
 import "./Topbar.css";
 import Notification from "../../components/Notification";
 import Path from "../../components/Path";
+import { NotificationIcon } from "../../assect/img/1index";
 
 function Topbar() {
   const { currentUser } = useSelector(userSelectors);
@@ -62,7 +62,7 @@ function Topbar() {
                 setClicked(!clicked);
               }}
             >
-              <NotificationIcon />
+              <img src={NotificationIcon} alt="" />
             </Button>
           </Tippy>
         </div>

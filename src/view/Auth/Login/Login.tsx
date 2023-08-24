@@ -1,13 +1,13 @@
-import { group, logo } from "../../../assect/img";
+import { group, logo } from "../../../assect/img/1index";
 import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useAppDispatch, userSelectors } from "../../../redux";
-import { WarningIcon } from "../../../components/icons";
 import { SignIn } from "../../../redux/slices/UserSlice";
 import { Button, notification, Input } from "antd";
 import { IUser } from "../../../interfaces";
+import { WarningIcon } from "../../../components/icons";
 
 function Login() {
   const [userName, setUserName] = useState("");
@@ -77,7 +77,6 @@ function Login() {
                   onChange={(e) => handleChangeInput(e, "password")}
                   placeholder="Nhập vào mật khẩu"
                   status={error && "error"}
-                  className="input_login"
                   spellCheck={false}
                 />
                 {error ? (

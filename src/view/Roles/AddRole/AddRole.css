@@ -1,0 +1,103 @@
+.wrapper_roleA {
+  padding: 16px 24px;
+}
+.heading_roleA {
+  color: #ff7506;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+.wrap_roleA {
+  position: relative;
+  padding-right: 104px;
+  padding: 16px 24px 24px;
+  background: #ffffff;
+  box-shadow: 2px 2px 8px rgba(232, 239, 244, 0.8);
+  border-radius: 16px;
+}
+.sub-heading_roleA {
+  color: #ff7506;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+.wrap-content_roleA {
+  display: flex;
+  gap: 24px;
+}
+.content_roleA {
+  width: 50%;
+}
+.title_roleA {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.required_roleA {
+  display: inline-block;
+  color: #e73f3f;
+  height: 18px;
+}
+.desc_roleA {
+  /* resize: none; */
+  min-height: 260px;
+  margin-bottom: 2px;
+}
+textarea.ant-input {
+  max-width: 100%;
+  height: auto;
+  min-height: 140px;
+  line-height: 1.5715;
+  vertical-align: bottom;
+  transition: all 0.3s, height 0s;
+}
+.input_roleA {
+  min-height: 51px;
+}
+.group-func_roleA {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 420px;
+  padding: 16px 24px;
+  background: #fff2e7;
+  border-radius: 8px;
+  overflow-y: overlay;
+}
+.func_roleA {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.func_roleA label {
+  margin-left: 0 !important;
+}
+.func_roleA > div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer_roleA {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin: 24px 0 32px;
+}
+.cancel-btn_roleA {
+  width: 147px;
+  height: 48px;
+  color: #ffac6a;
+  background-color: #ffffff;
+  border: 1.5px solid #ffac6a;
+  border-radius: 8px;
+}
+.add-btn_roleA {
+  width: 147px;
+  height: 48px;
+  background-color: #ffac6a;
+  color: #ffffff;
+  border-radius: 8px;
+}

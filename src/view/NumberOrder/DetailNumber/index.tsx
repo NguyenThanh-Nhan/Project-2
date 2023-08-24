@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { numericalSelectors } from "../../../redux";
 import "./DetailNumber.css"
-import { BackSquareIcon } from "../../../components/icons";
+import { BackSquareIcon } from "../../../assect/img/1index";
 
 function DetailNumber() {
   const { detailNumerical } = useSelector(numericalSelectors);
@@ -65,7 +65,7 @@ function DetailNumber() {
           </div>
         </div>
         <span onClick={() => navigate(-1)} className="back-btn_detailD">
-          <BackSquareIcon />
+          <img src={BackSquareIcon} alt="" />
           <span>Quay lại</span>
         </span>
       </div>

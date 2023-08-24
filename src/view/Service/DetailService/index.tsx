@@ -16,8 +16,8 @@ import Dropdown from "../../../components/Dropdown";
 import DateRangePicker from "../../../components/DateRangePicker";
 import Search from "../../../components/Search";
 import Table from "../../../components/Table";
-import { BackSquareIcon, EditSquare } from "../../../components/icons";
 import config from "../../../config/routes";
+import { BackSquareIcon, EditSquare } from "../../../assect/img/1index";
 
 interface DataType {
   key: string;
@@ -199,11 +199,11 @@ function DetailService() {
             to={config.routes.updateService}
             className="update-btn_serviceD"
           >
-            <EditSquare />
+            <img src={EditSquare} alt="" />
             <span>Cập nhật danh sách</span>
           </Link>
           <span onClick={handleBackPage} className="back-btn_serviceD">
-            <BackSquareIcon />
+            <img src={BackSquareIcon} alt="" />
             <span>Quay lại</span>
           </span>
         </div>

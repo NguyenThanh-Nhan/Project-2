@@ -21,7 +21,7 @@ import Dropdown from "../../../components/Dropdown";
 import DateRangePicker from "../../../components/DateRangePicker";
 import Search from "../../../components/Search";
 import Table from "../../../components/Table";
-import { AddSquare } from "../../../components/icons";
+import { AddSquare } from "../../../assect/img/1index";
 
 type OptionType = {
   label: string;
@@ -267,7 +267,7 @@ function Number() {
           to={config.routes.addNumber}
           className="btn-new_numberL"
         >
-          <AddSquare />
+          <img src={AddSquare} alt="" />
           <span>
             Cấp <br /> số mới
           </span>

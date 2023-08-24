@@ -2,22 +2,14 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { Button, Menu } from "antd";
 import type { MenuProps } from "antd";
 import { useEffect, useState } from "react";
-import {
-  DashboardIcon03,
-  Element4,
-  LogoutIcon,
-  Monitor,
-  MoreIcon,
-  ReportIcon,
-  ServiceIcon,
-  SettingIcon,
-} from "../../components/icons";
+
 import { useAppDispatch } from "../../redux";
 import PathSlice from "../../redux/slices/PathSlice";
-import { logo } from "../../assect/img";
 import "./Menu.css";
 import "./styleMenu.css";
 import config from "../../config/routes";
+import { DashboardIcon03, Element4, LogoutIcon, Monitor, MoreIcon, ReportIcon, ServiceIcon, SettingIcon } from "../../components/icons";
+import { logo } from "../../assect/img/1index";
 
 type MenuItem = Required<MenuProps>["items"][number];
 
@@ -44,7 +36,7 @@ const items: MenuProps["items"] = [
   getItem("Cấp số", "/number-list", <DashboardIcon03 />),
   getItem("Báo cáo", "/report", <ReportIcon />),
   getItem("Cài đặt hệ thống", "Cài đặt hệ thống", <SettingIcon />, [
-    getItem("Quản lý vai trò", "/settings/role-management"),
+    getItem("Quản lý vai trò", "/settings/role-list"),
     getItem("Quản lý tài khoản", "/settings/account-management"),
     getItem("Nhật ký người dùng", "/settings/user-log"),
   ]),
@@ -77,7 +69,7 @@ function MenuNav() {
             },
             {
               name: "Danh sách thiết bị",
-          link: config.routes.listDevice
+              link: config.routes.listDevice,
             },
           ])
         );
@@ -122,12 +114,12 @@ function MenuNav() {
             },
             {
               name: "Lập báo cáo",
-              link: "",
+              link: config.routes.report,
             },
           ])
         );
         break;
-      case "/settings/role-management":
+      case "/settings/role-list":
         setSelected(pathname);
         dispatch(
           PathSlice.actions.setPath([
@@ -137,7 +129,7 @@ function MenuNav() {
             },
             {
               name: "Quản lý vai trò",
-              link: "",
+              link: config.routes.listRole,
             },
           ])
         );

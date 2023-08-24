@@ -21,7 +21,7 @@ export const updateDevice = React.lazy(
 );
 export const AddDevice = React.lazy(() => import("./../view/Device/AddDevice"));
 
-// service 
+// service
 export const ListService = React.lazy(
   () => import("./../view/Service/ListService")
 );
@@ -35,10 +35,10 @@ export const DetailService = React.lazy(
   () => import("./../view/Service/DetailService")
 );
 
+//number
 export const Number = React.lazy(
   () => import("./../view/NumberOrder/ListNumber")
 );
-
 
 export const AddNumber = React.lazy(
   () => import("./../view/NumberOrder/AddNumber")
@@ -48,4 +48,16 @@ export const DetailNumber = React.lazy(
   () => import("./../view/NumberOrder/DetailNumber")
 );
 
+//report
+export const Report = React.lazy(() => import("./../view/Report"));
 
+//role management
+export const ListRole = React.lazy(
+  () => import("./../view/Roles/ListRole")
+);
+export const AddRoleRole = React.lazy(
+  () => import("./../view/Roles/AddRole")
+);
+export const UpdateRole = React.lazy(
+  () => import("./../view/Roles/UpdateRole")
+);

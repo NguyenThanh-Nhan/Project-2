@@ -60,51 +60,53 @@
   font-weight: 300;
   font-size: 1rem;
 }
-.wrap-button_detailA{
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-    margin-top: 24px;
-    margin-bottom: 32px;
-   
+.wrap-button_detailA {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 24px;
+  margin-bottom: 32px;
 }
-.btn-cancel_detailA{
-    width: 147px;
-    height: 48px;
-    padding: 12px;
-    text-align: center;
-    line-height: 22px;
-    color: #ffac6a;
-    background-color: #ffffff;
-    border: 1.5px solid #ffac6a;
-     border-radius: 8px;
+.btn-cancel_detailA {
+  width: 147px;
+  height: 48px;
+  padding: 12px;
+  text-align: center;
+  line-height: 22px;
+  color: #ffac6a;
+  background-color: #ffffff;
+  border: 1.5px solid #ffac6a;
+  border-radius: 8px;
 }
-.btn-add_detailA{
-width: 147px;
-    height: 48px;
-    padding: 12px;
-    text-align: center;
-    line-height: 22px;
-        background-color: #ffac6a;
-    color: #ffffff;
-     border-radius: 8px;
-     border: none;
+.btn-add_detailA {
+  width: 147px;
+  height: 48px;
+  padding: 12px;
+  text-align: center;
+  line-height: 22px;
+  background-color: #ffac6a;
+  color: #ffffff;
+  border-radius: 8px;
+  border: none;
 }
 
-.ant-select{
-    color: rgba(0, 0, 0, 0.85);
-    font-size: 14px;
-    font-variant: tabular-nums;
-    line-height: 1.5;
-    list-style: none;
-    font-feature-settings: 'tnum';
+.ant-select {
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5;
+  list-style: none;
+  font-feature-settings: "tnum";
 }
-/* .ant-select:not(.ant-select-customize-input) .ant-select-selector {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 44px;
-    border: 1.5px solid #d4d4d7;
-    border-width: 1.5px !important;
-    border-radius: 8px;
-} */
+
+:where(.css-dev-only-do-not-override-fpg3f5).ant-select-multiple
+  .ant-select-selection-overflow {
+  position: relative;
+  display: flex;
+  flex: auto;
+  flex-wrap: wrap;
+  width: 1620px;
+}
+.ant-select-show-search.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    width: 1620px;
+}

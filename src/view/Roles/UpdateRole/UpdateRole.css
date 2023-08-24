@@ -1,0 +1,99 @@
+.wrapper_roleU {
+  padding: 16px 24px;
+}
+.heading_roleU {
+  color: #ff7506;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+}
+.wrap_roleU {
+  position: relative;
+  padding-right: 104px;
+  padding: 16px 24px 24px;
+    background: #ffffff;
+    box-shadow: 2px 2px 8px rgba(232, 239, 244, 0.8);
+    border-radius: 16px;
+}
+.sub-heading_roleU {
+  color: #ff7506;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+.wrap-content_roleU {
+  display: flex;
+  gap: 24px;
+}
+.content_roleU {
+  width: 50%;
+}
+.title_roleU {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.required_roleU {
+  display: inline-block;
+  color: #e73f3f;
+  height: 18px;
+}
+.desc_roleU {
+  resize: none;
+  min-height: 260px;
+  margin-bottom: 2px;
+}
+.func_roleU {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.func_roleU label {
+  margin-left: 0 !important;
+}
+.func_roleU > div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.sub-heading_roleU {
+  color: #ff7506;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+.footer_roleU {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin: 24px 0 32px;
+}
+.cancel-btn_roleU {
+  width: 147px;
+  height: 48px;
+  color: #ffac6a;
+  background-color: #ffffff;
+  border: 1.5px solid #ffac6a;
+  border-radius: 8px;
+}
+.update-btn_roleU{
+  width: 147px;
+  height: 48px;
+  background-color: #ffac6a;
+  color: #ffffff;
+  border-radius: 8px;
+}
+textarea.ant-input {
+  max-width: 100%;
+  height: auto;
+  min-height: 140px;
+  line-height: 1.5715;
+  vertical-align: bottom;
+  transition: all 0.3s, height 0s;
+}
+.input_roleU {
+  min-height: 51px;
+}

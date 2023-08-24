@@ -26,7 +26,7 @@ import {
 } from "../../../utils/utils";
 import MessageNotify from "../../../components/Message";
 import Dropdown from "../../../components/Dropdown";
-import { CloseIcon } from "../../../components/icons";
+import { CloseIcon } from './../../../assect/img/1index';
 
 const _EXPIRED: number = 1;
 const resource = ["Kiosk", "Hệ thống"];
@@ -159,7 +159,7 @@ function AddNumber() {
       >
         <div className="wrap-modal_numberA">
           <span className="closed-btn_numberA" onClick={handleCloseModal}>
-            <CloseIcon />
+          <img src={CloseIcon} alt="" />
           </span>
           <div className="body-modal_numberA">
             <h1 className="header-title_numberA">Số thứ tự được cấp</h1>

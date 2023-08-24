@@ -1,13 +1,13 @@
 .wrapper_menu {
-  width: 300px;
-  height: calc(100% - 66px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 54px;
-  margin: 32px 0 30px;
-  background-color: white;
-  color: #7e7d88;
+    width: 500px;
+    height: calc(100% - 66px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 54px;
+    margin: 32px 0 30px -100px;
+    background-color: white;
+    color: #7e7d88;
 }
 .logo_menu {
   display: flex;
@@ -25,7 +25,7 @@
   justify-content: center;
   gap: 12px;
   padding: 1em 1em;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #ff7506;
   background: #fff2e7;

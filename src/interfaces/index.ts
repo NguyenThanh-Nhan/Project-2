@@ -92,3 +92,11 @@ export interface INumerical {
   phone?: string;
   email?: string;
 }
+export interface IRole {
+  key?: string;
+  _id: string;
+  roleName: string;
+  quantity: number;
+  description: string;
+  roles: any;
+}

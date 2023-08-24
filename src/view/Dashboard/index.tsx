@@ -1,4 +1,8 @@
 import { useState } from "react";
+import Dropdown from "../../components/Dropdown";
+import moment from "moment";
+import ReactApexChart from "react-apexcharts";
+import "./Dashboard.css";
 import {
   ArrowDownIcon,
   ArrowUpIcon,
@@ -6,11 +10,7 @@ import {
   CheckCalendarIcon,
   MarkIcon,
   UserCallIcon,
-} from "../../components/icons";
-import Dropdown from "../../components/Dropdown";
-import moment from "moment";
-import ReactApexChart from "react-apexcharts";
-import "./Dashboard.css";
+} from "../../assect/img/1index";
 
 const options = [
   {
@@ -50,7 +50,7 @@ function Dashboard() {
         <div className="category-item">
           <div className="top">
             <div className="wrap-icon">
-              <CalendarIcon />
+              <img src={CalendarIcon} alt="" />
             </div>
             <h2 className="title_das">
               Số thứ tự <br />
@@ -60,14 +60,14 @@ function Dashboard() {
           <div className="bottom_das">
             <h1 className="quantity_das">4.221</h1>
             <div className="percent_das">
-              <ArrowUpIcon /> <span>32,41%</span>
+              <img src={ArrowUpIcon} alt="" /> <span>32,41%</span>
             </div>
           </div>
         </div>
         <div className="category-item">
           <div className="top">
             <div className="wrap-icon">
-              <CheckCalendarIcon />
+              <img src={CheckCalendarIcon} alt="" />
             </div>
             <h2 className="title_das">
               Số thứ tự <br />
@@ -77,14 +77,14 @@ function Dashboard() {
           <div className="bottom_das">
             <h1 className="quantity_das">3.721</h1>
             <div className="percent_das">
-              <ArrowDownIcon /> <span>32,41%</span>
+              <img src={ArrowDownIcon} alt="" /> <span>32,41%</span>
             </div>
           </div>
         </div>
         <div className="category-item">
           <div className="top">
             <div className="wrap-icon">
-              <UserCallIcon />
+              <img src={UserCallIcon} alt="" />
             </div>
             <h2 className="title_das">
               Số thứ tự <br />
@@ -94,14 +94,14 @@ function Dashboard() {
           <div className="bottom_das">
             <h1 className="quantity_das">468</h1>
             <div className="percent_das">
-              <ArrowUpIcon /> <span>56,41%</span>
+              <img src={ArrowUpIcon} alt="" /> <span>56,41%</span>
             </div>
           </div>
         </div>
         <div className="category-item">
           <div className="top">
             <div className="wrap-icon">
-              <MarkIcon />
+              <img src={MarkIcon} alt="" />
             </div>
             <h2 className="title_das">
               Số thứ tự <br />
@@ -111,7 +111,7 @@ function Dashboard() {
           <div className="bottom_das">
             <h1 className="quantity_das">32</h1>
             <div className="percent_das">
-              <ArrowDownIcon /> <span>22,41%</span>
+              <img src={ArrowDownIcon} alt="" /> <span>22,41%</span>
             </div>
           </div>
         </div>

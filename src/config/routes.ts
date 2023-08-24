@@ -22,9 +22,17 @@ const routes = {
   //number-ofder
   listNumber: "/number-list",
   addNumber: "/number-list/add-number",
-  detailNumber:"/number-list/detail-number"
-  
+  detailNumber: "/number-list/detail-number",
+
+  //report
+  report: "/report",
+
+  //role
+  listRole: "/settings/role-list",
+  addRole: "/settings/role-list/role-add",
+  updateRole: "/settings/role-list/role-update",
 };
+
 
 const config = {
   routes,
