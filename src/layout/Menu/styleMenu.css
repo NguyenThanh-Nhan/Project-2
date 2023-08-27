@@ -80,3 +80,25 @@
 ul.ant-menu.ant-menu-root.ant-menu-vertical.ant-menu-light.menubar.css-dev-only-do-not-override-fpg3f5 {
   border-inline-end: 1px solid rgb(0, 0, 0, 0);
 }
+:where(.css-dev-only-do-not-override-fpg3f5).ant-menu .ant-menu-item,
+:where(.css-dev-only-do-not-override-fpg3f5).ant-menu .ant-menu-submenu,
+:where(.css-dev-only-do-not-override-fpg3f5).ant-menu .ant-menu-submenu-title {
+  border-radius: 0px;
+}
+:where(.css-dev-only-do-not-override-fpg3f5).ant-menu-submenu-popup
+  .ant-menu-vertical.ant-menu-sub {
+  min-width: 200px;
+  max-height: calc(100vh - 100px);
+  padding: 0;
+  border-inline-end: 0;
+  border-radius: 0px;
+}
+:where(.css-dev-only-do-not-override-fpg3f5).ant-menu-submenu
+  > .ant-menu
+  .ant-menu-item,
+:where(.css-dev-only-do-not-override-fpg3f5).ant-menu-submenu
+  > .ant-menu
+  .ant-menu-submenu
+  > .ant-menu-submenu-title {
+  border-radius: 0px;
+}

@@ -8,7 +8,16 @@ import PathSlice from "../../redux/slices/PathSlice";
 import "./Menu.css";
 import "./styleMenu.css";
 import config from "../../config/routes";
-import { DashboardIcon03, Element4, LogoutIcon, Monitor, MoreIcon, ReportIcon, ServiceIcon, SettingIcon } from "../../components/icons";
+import {
+  DashboardIcon03,
+  Element4,
+  LogoutIcon,
+  Monitor,
+  MoreIcon,
+  ReportIcon,
+  ServiceIcon,
+  SettingIcon,
+} from "../../components/icons";
 import { logo } from "../../assect/img/1index";
 
 type MenuItem = Required<MenuProps>["items"][number];
@@ -37,8 +46,8 @@ const items: MenuProps["items"] = [
   getItem("Báo cáo", "/report", <ReportIcon />),
   getItem("Cài đặt hệ thống", "Cài đặt hệ thống", <SettingIcon />, [
     getItem("Quản lý vai trò", "/settings/role-list"),
-    getItem("Quản lý tài khoản", "/settings/account-management"),
-    getItem("Nhật ký người dùng", "/settings/user-log"),
+    getItem("Quản lý tài khoản", "/settings/account-list"),
+    getItem("Nhật ký người dùng", "/settings/userLog"),
   ]),
 ];
 function MenuNav() {
@@ -134,7 +143,7 @@ function MenuNav() {
           ])
         );
         break;
-      case "/settings/account-management":
+      case "/settings/account-list":
         setSelected(pathname);
         dispatch(
           PathSlice.actions.setPath([
@@ -144,12 +153,12 @@ function MenuNav() {
             },
             {
               name: "Quản lý tài khoản",
-              link: "",
+              link: config.routes.listAccount,
             },
           ])
         );
         break;
-      case "/settings/user-log":
+      case "/settings/userLog":
         setSelected(pathname);
         dispatch(
           PathSlice.actions.setPath([

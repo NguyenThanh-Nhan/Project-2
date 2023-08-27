@@ -24,35 +24,27 @@ const ServiceSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
+    const setLoading = (state: typeof initialState) => {
+      state.loading = true;
+    };
+
+    const clearLoading = (state: typeof initialState) => {
+      state.loading = false;
+    };
+
     builder
-      .addCase(fetchAllService.pending, (state) => {
-        state.loading = true;
-      })
+      .addCase(fetchAllService.pending, setLoading)
       .addCase(fetchAllService.fulfilled, (state, action) => {
-        state.loading = false;
-        state.services = action.payload as unknown as IService[];
+        clearLoading(state);
+        state.services = action.payload;
       })
-      .addCase(fetchAllService.rejected, (state, action) => {
-        state.loading = false;
-      })
-      .addCase(addService.pending, (state) => {
-        state.loading = true;
-      })
-      .addCase(addService.fulfilled, (state) => {
-        state.loading = false;
-      })
-      .addCase(addService.rejected, (state) => {
-        state.loading = false;
-      })
-      .addCase(updateService.pending, (state) => {
-        state.loading = true;
-      })
-      .addCase(updateService.fulfilled, (state) => {
-        state.loading = false;
-      })
-      .addCase(updateService.rejected, (state) => {
-        state.loading = false;
-      });
+      .addCase(fetchAllService.rejected, clearLoading)
+      .addCase(addService.pending, setLoading)
+      .addCase(addService.fulfilled, clearLoading)
+      .addCase(addService.rejected, clearLoading)
+      .addCase(updateService.pending, setLoading)
+      .addCase(updateService.fulfilled, clearLoading)
+      .addCase(updateService.rejected, clearLoading);
   },
 });
 

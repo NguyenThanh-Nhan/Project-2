@@ -31,6 +31,11 @@ const routes = {
   listRole: "/settings/role-list",
   addRole: "/settings/role-list/role-add",
   updateRole: "/settings/role-list/role-update",
+
+  //account
+  listAccount: "/settings/account-list",
+  addAccount: "/settings/account-list/account-add",
+  updateAccount: "/settings/account-list/account-update",
 };
 
 

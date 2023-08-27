@@ -31,68 +31,62 @@ const NumberSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
+    const setLoading = (state: typeof initialState) => {
+      state.loading = true;
+    };
+
+    const setError = (state: typeof initialState) => {
+      state.loading = false;
+    };
+
     builder
-      .addCase(fetchAllNumerical.pending, (state) => {
-        state.loading = true;
-      })
+      .addCase(fetchAllNumerical.pending, setLoading)
       .addCase(fetchAllNumerical.fulfilled, (state, action) => {
         state.loading = false;
         state.numericalList = action.payload;
       })
-      .addCase(fetchAllNumerical.rejected, (state) => {
-        state.loading = false;
-      })
-      .addCase(addNumerical.pending, (state) => {
-        state.loading = true;
-      })
-      .addCase(addNumerical.fulfilled, (state) => {
-        state.loading = false;
-      })
-      .addCase(addNumerical.rejected, (state) => {
-        state.loading = false;
-      })
-      .addCase(fetchNumericalByCode.pending, (state) => {
-        state.loading = true;
-      })
+      .addCase(fetchAllNumerical.rejected, setError)
+      .addCase(addNumerical.pending, setLoading)
+      .addCase(addNumerical.fulfilled, setError)
+      .addCase(addNumerical.rejected, setError)
+      .addCase(fetchNumericalByCode.pending, setLoading)
       .addCase(fetchNumericalByCode.fulfilled, (state, action) => {
         state.loading = false;
         state.numericalList = action.payload;
       })
-      .addCase(fetchNumericalByCode.rejected, (state) => {
-        state.loading = false;
-      });
+      .addCase(fetchNumericalByCode.rejected, setError);
   },
 });
+const fetchDataFromDB = async (code: string | null = null) => {
+  let data: INumerical[] = [];
+  const querySnapshot = await getDocs(collection(db, "numerical"));
+
+  querySnapshot.forEach((doc) => {
+    const docData = {
+      _id: doc.id,
+      key: doc.id,
+      ...doc.data(),
+    } as INumerical;
+
+    if (code === null || docData.serviceCode === code) {
+      data.push(docData);
+    }
+  });
+
+  return data.sort((a, b) => a.stt.localeCompare(b.stt));
+};
 
 export const fetchAllNumerical = createAsyncThunk(
   "fetAllNumerical",
   async () => {
-    let data: INumerical[] = [];
-    const querySnapshot = await getDocs(collection(db, "numerical"));
-    querySnapshot.forEach((doc) => {
-      data.push({
-        _id: doc.id,
-        key: doc.id,
-        ...doc.data(),
-      } as INumerical);
-    });
-    return data.sort((a, b) => a.stt.localeCompare(b.stt));
+    return fetchDataFromDB();
   }
 );
+
 export const fetchNumericalByCode = createAsyncThunk(
   "fetchNumericalByCode",
   async (code: string) => {
-    let data: INumerical[] = [];
-    const querySnapshot = await getDocs(collection(db, "numerical"));
-    querySnapshot.forEach((doc) => {
-      if (doc.data().serviceCode === code)
-        data.push({
-          _id: doc.id,
-          key: doc.id,
-          ...doc.data(),
-        } as INumerical);
-    });
-    return data.sort((a, b) => a.stt.localeCompare(b.stt));
+    return fetchDataFromDB(code);
   }
 );
 
@@ -140,7 +134,5 @@ export const increaseSTT = createAsyncThunk(
     await updateDoc(ref, { value });
   }
 );
-
-
 
 export default NumberSlice;

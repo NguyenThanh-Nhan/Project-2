@@ -52,12 +52,18 @@ export const DetailNumber = React.lazy(
 export const Report = React.lazy(() => import("./../view/Report"));
 
 //role management
-export const ListRole = React.lazy(
-  () => import("./../view/Roles/ListRole")
-);
-export const AddRoleRole = React.lazy(
-  () => import("./../view/Roles/AddRole")
-);
+export const ListRole = React.lazy(() => import("./../view/Roles/ListRole"));
+export const AddRole = React.lazy(() => import("./../view/Roles/AddRole"));
 export const UpdateRole = React.lazy(
   () => import("./../view/Roles/UpdateRole")
+);
+// account management
+export const ListAccount = React.lazy(
+  () => import("./../view/Account/ListAccount")
+);
+export const AddAccount = React.lazy(
+  () => import("./../view/Account/AddAccount")
+);
+export const UpdateAccount = React.lazy(
+  () => import("./../view/Account/UpdateAccount")
 );

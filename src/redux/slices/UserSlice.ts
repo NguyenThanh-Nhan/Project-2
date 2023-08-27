@@ -25,10 +25,16 @@ const UserSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
+    const setLoading = (state: typeof initialState) => {
+      state.loading = true;
+    };
+
+    const resetLoading = (state: typeof initialState) => {
+      state.loading = false;
+    };
+
     builder
-      .addCase(SignIn.pending, (state) => {
-        state.loading = true;
-      })
+      .addCase(SignIn.pending, setLoading)
       .addCase(SignIn.fulfilled, (state, action) => {
         state.loading = false;
         state.currentUser = action.payload;
@@ -37,43 +43,21 @@ const UserSlice = createSlice({
         state.loading = false;
         state.currentUser = undefined;
       })
-      .addCase(fetchAllUsers.pending, (state) => {
-        state.loading = true;
-      })
+      .addCase(fetchAllUsers.pending, setLoading)
       .addCase(fetchAllUsers.fulfilled, (state, action) => {
         state.loading = false;
         state.users = action.payload;
       })
-      .addCase(fetchAllUsers.rejected, (state) => {
-        state.loading = false;
-      })
-      .addCase(CheckEmailExists.pending, (state) => {
-        state.loading = true;
-      })
-      .addCase(CheckEmailExists.fulfilled, (state) => {
-        state.loading = false;
-      })
-      .addCase(CheckEmailExists.rejected, (state) => {
-        state.loading = false;
-      })
-      .addCase(addUser.pending, (state) => {
-        state.loading = true;
-      })
-      .addCase(addUser.fulfilled, (state) => {
-        state.loading = false;
-      })
-      .addCase(addUser.rejected, (state) => {
-        state.loading = false;
-      })
-      .addCase(updateUser.pending, (state) => {
-        state.loading = true;
-      })
-      .addCase(updateUser.fulfilled, (state) => {
-        state.loading = false;
-      })
-      .addCase(updateUser.rejected, (state) => {
-        state.loading = false;
-      });
+      .addCase(fetchAllUsers.rejected, resetLoading)
+      .addCase(CheckEmailExists.pending, setLoading)
+      .addCase(CheckEmailExists.fulfilled, resetLoading)
+      .addCase(CheckEmailExists.rejected, resetLoading)
+      .addCase(addUser.pending, setLoading)
+      .addCase(addUser.fulfilled, resetLoading)
+      .addCase(addUser.rejected, resetLoading)
+      .addCase(updateUser.pending, setLoading)
+      .addCase(updateUser.fulfilled, resetLoading)
+      .addCase(updateUser.rejected, resetLoading);
   },
 });
 

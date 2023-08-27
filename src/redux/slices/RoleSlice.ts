@@ -9,11 +9,24 @@ import { IRole, IUpdateProps } from "../../interfaces";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { db } from "../../firebase";
+interface RoleState {
+  loading: boolean;
+  roles: IRole[];
+  infoUpdateRole: IRole;
+}
 
-const initialState = {
+const initialState: RoleState = {
   loading: false,
-  roles: [] as IRole[],
+  roles: [],
   infoUpdateRole: {} as IRole,
+};
+
+const setLoading = (state: RoleState) => {
+  state.loading = true;
+};
+
+const setNotLoading = (state: RoleState) => {
+  state.loading = false;
 };
 
 const RoleSlice = createSlice({
@@ -26,36 +39,21 @@ const RoleSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(fetchAllRole.pending, (state) => {
-        state.loading = true;
-      })
+      .addCase(fetchAllRole.pending, setLoading)
       .addCase(fetchAllRole.fulfilled, (state, action) => {
         state.loading = false;
         state.roles = action.payload;
       })
-      .addCase(fetchAllRole.rejected, (state) => {
-        state.loading = false;
-      })
-      .addCase(addRole.pending, (state) => {
-        state.loading = true;
-      })
-      .addCase(addRole.fulfilled, (state) => {
-        state.loading = false;
-      })
-      .addCase(addRole.rejected, (state) => {
-        state.loading = false;
-      })
-      .addCase(updateRole.pending, (state) => {
-        state.loading = true;
-      })
-      .addCase(updateRole.fulfilled, (state) => {
-        state.loading = false;
-      })
-      .addCase(updateRole.rejected, (state) => {
-        state.loading = false;
-      });
+      .addCase(fetchAllRole.rejected, setNotLoading)
+      .addCase(addRole.pending, setLoading)
+      .addCase(addRole.fulfilled, setNotLoading)
+      .addCase(addRole.rejected, setNotLoading)
+      .addCase(updateRole.pending, setLoading)
+      .addCase(updateRole.fulfilled, setNotLoading)
+      .addCase(updateRole.rejected, setNotLoading);
   },
 });
+
 
 export const fetchAllRole = createAsyncThunk("fetchAllRole", async () => {
   let data: IRole[] = [];

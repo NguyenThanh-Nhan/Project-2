@@ -9,12 +9,15 @@ import {
 import { IDevice, IUpdateProps } from "../../interfaces";
 import { db } from "../../firebase";
 
-const initialState = {
+const initialState: {
+  loading: boolean;
+  devices: IDevice[];
+  detailDevice: IDevice;
+} = {
   loading: false,
-  devices: [] as IDevice[],
+  devices: [],
   detailDevice: {} as IDevice,
 };
-
 const deviceSlice = createSlice({
   name: "device",
   initialState,
@@ -30,9 +33,9 @@ const deviceSlice = createSlice({
       })
       .addCase(fetchAllDevice.fulfilled, (state, action) => {
         state.loading = false;
-        state.devices = action.payload as unknown as IDevice[];
+        state.devices = action.payload;
       })
-      .addCase(fetchAllDevice.rejected, (state, action) => {
+      .addCase(fetchAllDevice.rejected, (state) => {
         state.loading = false;
       });
   },

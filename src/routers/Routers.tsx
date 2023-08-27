@@ -1,18 +1,21 @@
 import {
+  AddAccount,
   AddDevice,
   AddNumber,
-  AddRoleRole,
+  AddRole,
   AddService,
   DetailDevice,
   DetailNumber,
   DetailService,
   EmailForgotPassword,
   ForgotPassword,
+  ListAccount,
   ListDevice,
   ListRole,
   ListService,
   Number,
   Report,
+  UpdateAccount,
   UpdateRole,
   UpdateService,
   updateDevice,
@@ -124,7 +127,7 @@ export const routes = [
   },
   {
     path: config.routes.addRole,
-    component: AddRoleRole,
+    component: AddRole,
     layout: MainLayout,
   },
   {
@@ -132,5 +135,20 @@ export const routes = [
     component: UpdateRole,
     layout: MainLayout,
   },
-
+  //account
+  {
+    path: config.routes.listAccount,
+    component: ListAccount,
+    layout: MainLayout,
+  },
+  {
+    path: config.routes.addAccount,
+    component: AddAccount,
+    layout: MainLayout,
+  },
+  {
+    path: config.routes.updateAccount,
+    component: UpdateAccount,
+    layout: MainLayout,
+  },
 ];
