@@ -1,0 +1,72 @@
+.wrapper_accountA {
+  padding: 16px 24px;
+}
+.heading_accountA {
+  margin-bottom: 10px;
+  color: #ff7506;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+.wrap_accountA {
+  height: 534px;
+  padding: 16px 24px;
+  background: #ffffff;
+  box-shadow: 2px 2px 8px rgba(232, 239, 244, 0.8);
+  border-radius: 16px;
+}
+.sub-heading_accountA {
+  color: #ff7506;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-bottom: 20px;
+}
+.wrap-content_accountA {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  margin-bottom: 18px;
+}
+.wrap-content_accountA > div {
+  width: calc(50% - 12px);
+}
+.title_accountA {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.required_accountA {
+  display: inline-block;
+  color: #ff7506;
+  height: 18px;
+}
+.input-password_accountA {
+  height: 51px;
+  border-width: 1.5px;
+  border-radius: 8px;
+  padding: 8.5px 12px;
+  font-size: 1rem;
+  font-weight: 300;
+}
+.footer_accountA {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin: 46px 0 32px;
+}
+.cancel-btn_accountA {
+  width: 147px;
+  height: 48px;
+  color: #ffac6a;
+  background-color: #ffffff;
+  border: 1.5px solid #ffac6a;
+  border-radius: 8px;
+}
+.add-btn_accountA {
+  width: 147px;
+  height: 48px;
+  background-color: #ffac6a;
+  color: #ffffff;
+  border-radius: 8px;
+}
