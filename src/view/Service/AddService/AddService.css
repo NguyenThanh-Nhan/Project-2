@@ -136,12 +136,19 @@
   color: #ffffff;
   border-radius: 8px;
 }
-.ant-input-affix-wrapper, .ant-input {
-   min-height: 51px;
+.ant-input-affix-wrapper,
+.ant-input {
+  border: 1.5px solid #d4d4d7;
+  border-radius: 8px;
+  padding: 8.5px 12px;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 2rem;
+  min-height: 51px;
 }
 .wrap-text-box_serviceA .text-box-item_serviceA {
-    gap: 2px;
-    display: flex;
-    flex-direction: column;
-    width: 50%;
+  gap: 2px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }

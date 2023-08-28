@@ -48,6 +48,7 @@
   padding: 8.5px 12px;
   font-size: 1rem;
   font-weight: 300;
+  min-height: 51px;
 }
 .footer_accountA {
   display: flex;
@@ -69,4 +70,33 @@
   background-color: #ffac6a;
   color: #ffffff;
   border-radius: 8px;
+}
+
+.ant-input-affix-wrapper,
+.ant-input {
+  border: 1.5px solid #d4d4d7;
+  border-radius: 8px;
+  padding: 8.5px 12px;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 2rem;
+  min-height: 51px;
+}
+
+:where(.css-dev-only-do-not-override-fpg3f5).ant-input-affix-wrapper
+  > input.ant-input {
+  padding: 0;
+  font-size: inherit;
+  min-height: 45px;
+  outline: none;
+  margin-top: -8px;
+}
+.ant-input-affix-wrapper,
+.ant-input {
+  border: 1.5px solid #d4d4d7;
+  border-radius: 8px;
+  padding: 8.5px 12px;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 2rem;
 }
