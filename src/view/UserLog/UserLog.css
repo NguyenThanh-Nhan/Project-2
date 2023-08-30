@@ -1,0 +1,23 @@
+.wrapper_userLog {
+  padding: 0 104px 0 24px;
+}
+.filter_userLog {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0;
+}
+.wrap_userLog {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.search-box_userLog {
+  width: 240px;
+}
+.title_userLog {
+  color: #282739;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 2rem;
+}

@@ -18,12 +18,13 @@ import {
   UpdateAccount,
   UpdateRole,
   UpdateService,
+  UserLog,
   updateDevice,
 } from "../config/lazyLoadedComponents";
 import config from "../config/routes";
 import MainLayout from "../layout/LayoutFirst";
 import LayoutSecond from "../layout/LayoutSecond";
-import Login from "../view/Auth/Login/Login";
+import Login from "../view/Auth/Login";
 import Dashboard from "../view/Dashboard";
 import Profile from "../view/Profile";
 import RootPage from "../view/RootPage";
@@ -119,7 +120,6 @@ export const routes = [
   },
 
   //role
-
   {
     path: config.routes.listRole,
     component: ListRole,
@@ -149,6 +149,12 @@ export const routes = [
   {
     path: config.routes.updateAccount,
     component: UpdateAccount,
+    layout: MainLayout,
+  },
+  //userlog
+  {
+    path: config.routes.userLog,
+    component: UserLog,
     layout: MainLayout,
   },
 ];

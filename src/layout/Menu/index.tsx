@@ -47,7 +47,7 @@ const items: MenuProps["items"] = [
   getItem("Cài đặt hệ thống", "Cài đặt hệ thống", <SettingIcon />, [
     getItem("Quản lý vai trò", "/settings/role-list"),
     getItem("Quản lý tài khoản", "/settings/account-list"),
-    getItem("Nhật ký người dùng", "/settings/userLog"),
+    getItem("Nhật ký người dùng", "/settings/user-log"),
   ]),
 ];
 function MenuNav() {
@@ -158,7 +158,7 @@ function MenuNav() {
           ])
         );
         break;
-      case "/settings/userLog":
+      case "/settings/user-log":
         setSelected(pathname);
         dispatch(
           PathSlice.actions.setPath([
@@ -168,7 +168,7 @@ function MenuNav() {
             },
             {
               name: "Nhật ký hoạt động",
-              link: "",
+              link: config.routes.userLog,
             },
           ])
         );

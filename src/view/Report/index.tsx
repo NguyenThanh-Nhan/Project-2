@@ -9,6 +9,7 @@ import Table from "../../components/Table";
 import "./Report.css";
 import { db } from "../../firebase";
 import { ArrowIcon, DownloadIcon } from "../../assect/img/1index";
+import * as XLSX from "xlsx";
 
 interface DataType {
   key: string;
@@ -157,6 +158,20 @@ function Report() {
       setDataSource(data.sort((a, b) => a.stt.localeCompare(b.stt)));
     });
   }, []);
+  const handleDownload = () => {
+    const dataToExport = dataSource.map((item: any) => ({
+      "Số thứ tự": item.stt,
+      "Tên dịch vụ": item.serviceName,
+      "Thời gian cấp": convertTimeToString(item.createdAt.toDate()),
+      "Tình trạng": item.status,
+      "Nguồn cấp": item.resource,
+    }));
+
+    const ws = XLSX.utils.json_to_sheet(dataToExport);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "Report");
+    XLSX.writeFile(wb, "report.xlsx");
+  };
   return (
     <div className="wrapper_report">
       <div className="date-picker_report">
@@ -165,7 +180,7 @@ function Report() {
       </div>
       <div className="wrap-content_report">
         <Table columns={columns} rows={dataSource} />
-        <div className="btn-download_report">
+        <div className="btn-download_report" onClick={handleDownload}>
           <img src={DownloadIcon} alt="" />
           <span>Tải về</span>
         </div>

@@ -3,10 +3,10 @@ import React from "react";
 export const Profile = React.lazy(() => import("./../view/Profile/index"));
 export const Dashboard = React.lazy(() => import("./../view/Dashboard/index"));
 export const EmailForgotPassword = React.lazy(
-  () => import("./../view/Auth/EmailForgotPassword/EmailForgotPassword")
+  () => import("../view/Auth/EmailForgotPassword")
 );
 export const ForgotPassword = React.lazy(
-  () => import("./../view/Auth/ForgotPassword/ForgotPassword")
+  () => import("../view/Auth/ForgotPassword")
 );
 
 // device
@@ -67,3 +67,6 @@ export const AddAccount = React.lazy(
 export const UpdateAccount = React.lazy(
   () => import("./../view/Account/UpdateAccount")
 );
+
+//userlog
+export const UserLog = React.lazy(() => import("./../view/UserLog/index"));

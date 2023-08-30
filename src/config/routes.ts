@@ -36,8 +36,10 @@ const routes = {
   listAccount: "/settings/account-list",
   addAccount: "/settings/account-list/account-add",
   updateAccount: "/settings/account-list/account-update",
-};
 
+  //userlog
+  userLog: "/settings/user-log",
+};
 
 const config = {
   routes,
