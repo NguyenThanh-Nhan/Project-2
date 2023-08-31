@@ -1,8 +1,16 @@
 import DateRangePicker from "../../components/DateRangePicker";
-import "./UserLog.css"
+import "./UserLog.css";
 import Search from "../../components/Search";
 import Table from "../../components/Table";
 import { convertTimeToString } from "../../utils/utils";
+import { useEffect, useState } from "react";
+import useDebug from "../../hooks/useDebug";
+import { collection, onSnapshot } from "firebase/firestore";
+import { db } from "../../firebase";
+import { IUser } from "../../interfaces";
+import { fetchAllUsers } from "../../redux/slices/UserSlice";
+import { useAppDispatch, userSelectors } from "../../redux";
+import { useSelector } from "react-redux";
 
 const columns = [
   {
@@ -45,8 +53,54 @@ for (let i = 0; i < 20; i++) {
     action: "Cập nhật thông tin dịch vụ DV_01",
   });
 }
+const formattedDataSource = dataSource.map((item) => ({
+  key: item.key,
+  userName: item.userName,
+  time: item.time,
+  ip: item.ip,
+  action: item.action,
+}));
 
 function UserLog() {
+  const dispatch = useAppDispatch();
+
+  const [searchUserLog, setSearchUserLog] = useState("");
+  const { users } = useSelector(userSelectors);
+
+  const debugValue = useDebug(searchUserLog, 500);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [dataSource, setDataSource] = useState<IUser[]>([]);
+
+  useEffect(() => {
+    snapshotDB();
+    dispatch(fetchAllUsers());
+  }, [dispatch]);
+
+  useEffect(() => {
+    handleFilter();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [debugValue, searchUserLog, users]);
+
+  const snapshotDB = () => {
+    onSnapshot(collection(db, "users"), (snapshot) => {
+      let data: IUser[] = [];
+      snapshot.docs.forEach((doc) =>
+        data.push({
+          _id: doc.id,
+          key: doc.id,
+          ...doc.data(),
+        } as IUser)
+      );
+      setDataSource(data.sort((a, b) => a.email.localeCompare(b.userName)));
+    });
+  };
+  const handleFilter = () => {
+    const filteredData = users.filter((user) =>
+      user.userName.toUpperCase().includes(debugValue.toUpperCase())
+    );
+    setDataSource(filteredData);
+  };
+
   return (
     <div className="wrapper_userLog">
       <div className="filter_userLog">
@@ -57,12 +111,16 @@ function UserLog() {
         <div className="wrap_userLog">
           <div className="search-box_userLog">
             <span className="title_userLog">Từ khoá</span>
-            <Search placeholder="Nhập từ khóa" />
+            <Search
+              placeholder="Nhập từ khóa"
+              value={searchUserLog}
+              onChange={(e) => setSearchUserLog(e.target.value)}
+            />
           </div>
         </div>
       </div>
       <div className="wrap-table_userLog">
-        <Table columns={columns} rows={dataSource} pageSize={10} />
+        <Table columns={columns} rows={formattedDataSource} pageSize={10} />
       </div>
     </div>
   );

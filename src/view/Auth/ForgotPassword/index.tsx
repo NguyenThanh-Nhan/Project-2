@@ -55,46 +55,46 @@ function ForgotPassword() {
     } else MessageNotify("error", "Đã có lỗi xảy ra! Vui lòng thử lại!");
   };
   return (
-    <div className="wrapper">
-      <div className="content-left">
-        <div className="content-left_wrap">
-          <img src={logo} alt="" className="img-logo" />
-          <div className="d-flex-center d-flex-column">
-            <h3 className="title">Đặt lại mật khẩu mới</h3>
+    <div className="wrapper_ForPass">
+      <div className="content-left_ForPass">
+        <div className="content-left_wra_ForPassp">
+          <img src={logo} alt="" className="img-logo_ForPass" />
+          <div className="">
+            <h3 className="title_ForPass">Đặt lại mật khẩu mới</h3>
             <div>
               <label htmlFor="password">
-                Mật khẩu <span className="required">*</span>
+                Mật khẩu <span className="required_ForPass">*</span>
               </label>
               <Input.Password
                 id="password"
                 status={error && "error"}
-                className="input"
+                className="input_ForPass"
                 value={password}
                 onChange={(e) => handleChangeInput(e, "password")}
               />
-              <label htmlFor="confirm" className="confirm">
-                Nhập lại mật khẩu <span className="required">*</span>
+              <label htmlFor="confirm" className="confirm_ForPass">
+                Nhập lại mật khẩu <span className="required_ForPass">*</span>
               </label>
               <Input.Password
                 id="confirm"
                 status={error && "error"}
-                className="input"
+                className="input_ForPass"
                 value={confirmPass}
                 onChange={(e) => handleChangeInput(e, "confirmPass")}
               />
             </div>
           </div>
-          <div className="error-message">
+          <div className="error-message_ForPass">
             {error && (
               <>
                 <WarningIcon /> {error}
               </>
             )}
           </div>
-          <div className="wrap-button">
+          <div className="wrap-button_ForPass">
             <Button
               size={"large"}
-              className="btn-confirm"
+              className="btn-confirm_ForPass"
               onClick={handleResetPass}
               loading={loading}
             >
@@ -103,7 +103,7 @@ function ForgotPassword() {
           </div>
         </div>
       </div>
-      <div className="content-right">
+      <div className="content-right_ForPass">
         <img src={group2} alt="" className="img_bgForgotPassword" />
       </div>
     </div>

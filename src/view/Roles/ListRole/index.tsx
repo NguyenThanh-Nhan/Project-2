@@ -49,6 +49,7 @@ function ListRole() {
     },
   ];
 
+
   useEffect(() => {
     snapshotDatabase();
     dispatch(fetchAllRole());
@@ -57,7 +58,7 @@ function ListRole() {
   useEffect(() => {
     handleFilter();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [debugValue, roles]);
 
   const snapshotDatabase = () => {
     onSnapshot(collection(db, "roles"), (snapshot) => {
@@ -76,7 +77,7 @@ function ListRole() {
   const handleFilter = () => {
     setDataSource(
       roles.filter((role) =>
-        role?.roleName?.toLowerCase().includes(debugValue.toLowerCase())
+        role.roleName.toUpperCase().includes(debugValue.toUpperCase())
       )
     );
   };

@@ -11,7 +11,9 @@ import PathSlice from "../../../redux/slices/PathSlice";
 import config from "../../../config/routes";
 import "./ListService.css";
 import { useSelector } from "react-redux";
-import serviceSlice, { fetchAllService} from "../../../redux/slices/ServiceSlice";
+import serviceSlice, {
+  fetchAllService,
+} from "../../../redux/slices/ServiceSlice";
 import { serviceSelectors, useAppDispatch } from "../../../redux";
 import { AddSquare } from "../../../assect/img/1index";
 
@@ -34,6 +36,7 @@ function Service() {
   const { loading } = useSelector(serviceSelectors);
   const dispatch = useAppDispatch();
   const [dataSource, setDataSource] = useState<IService[]>([]);
+  const [searchService, setSearchService] = useState("");
   const columns = [
     {
       title: "Mã dịch vụ",
@@ -89,23 +92,28 @@ function Service() {
     },
   ];
 
-   useEffect(() => {
-     onSnapshot(collection(db, "services"), (snapshot) => {
-       let data: IService[] = [];
-       snapshot.docs.map((doc) => {
-         return data.push({
-           _id: doc.id,
-           key: doc.id,
-           ...doc.data(),
-         } as IService);
-       });
-       setDataSource(
-         data.sort((a, b) => a.serviceCode.localeCompare(b.serviceCode))
-       );
-     });
-     dispatch(fetchAllService());
-   }, [dispatch]);
+  useEffect(() => {
+    onSnapshot(collection(db, "services"), (snapshot) => {
+      let data: IService[] = [];
+      snapshot.docs.map((doc) => {
+        return data.push({
+          _id: doc.id,
+          key: doc.id,
+          ...doc.data(),
+        } as IService);
+      });
 
+      // Filter the data based on the search query
+      const filteredData = data.filter((item) =>
+        item.serviceName.toLowerCase().includes(searchService.toLowerCase())
+      );
+
+      setDataSource(
+        filteredData.sort((a, b) => a.serviceCode.localeCompare(b.serviceCode))
+      );
+    });
+    dispatch(fetchAllService());
+  }, [dispatch, searchService]);
   const handleClickDetail = (record: IService) => {
     dispatch(serviceSlice.actions.setDetailService(record));
     dispatch(
@@ -142,7 +150,11 @@ function Service() {
         </div>
         <div className="search-wrap_serviceL">
           <span className="title_serviceL">Từ khoá</span>
-          <Search placeholder="Nhập từ khóa" />
+          <Search
+            placeholder="Nhập từ khóa"
+            value={searchService}
+            onChange={(event) => setSearchService(event.target.value)}
+          />
         </div>
       </div>
       <div className="wrap-table_serviceL">
