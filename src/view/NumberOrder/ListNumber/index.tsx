@@ -67,6 +67,7 @@ function Number() {
   const { numericalList } = useSelector(numericalSelectors);
   const dispatch = useAppDispatch();
   const [dataSource, setDataSource] = useState<INumerical[]>([]);
+    const [searchOrderNumber, setSearchOrderNumber] = useState("");
   const [stateDropdown, setStateDropdown] = useState({
     selectedService: "Tất cả",
     selectedStatus: "Tất cả",
@@ -193,10 +194,20 @@ function Number() {
         (item) =>
           item.service.includes(service) &&
           item.status.includes(status) &&
-          item.resource.includes(resource)
+          item.resource.includes(resource) &&
+          (searchOrderNumber === "" ||
+            item.service
+              .toLowerCase()
+              .includes(searchOrderNumber.toLowerCase())) // Filter by service name
       )
     );
-  }, [selectedService, selectedStatus, selectedResource, numericalList]);
+  }, [
+    selectedService,
+    selectedStatus,
+    selectedResource,
+    numericalList,
+    searchOrderNumber,
+  ]);
 
   const handleClickDetail = (record: INumerical) => {
     dispatch(NumberSlice.actions.setDetailNumerical(record));
@@ -250,7 +261,11 @@ function Number() {
         </div>
         <div className="search-box_numberL">
           <span className="title_numberL">Từ khóa</span>
-          <Search placeholder="Nhập từ khóa" />
+          <Search
+            placeholder="Nhập từ khóa"
+            value={searchOrderNumber}
+            onChange={(e) => setSearchOrderNumber(e.target.value)}
+          />
         </div>
       </div>
       <div className="wrap-table_numberL">

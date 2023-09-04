@@ -9,6 +9,7 @@ function MessageNotify(
 ) {
   return notification[type]({
     message,
+    placement,
     duration: 3,
   });
 }

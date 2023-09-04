@@ -50,6 +50,7 @@ function ListDevice() {
   const [dataSource, setDataSource] = useState<IDevice[]>([]);
   const [active, setActive] = useState("Tất cả");
   const [connect, setConnect] = useState("Tất cả");
+  const [searchDevice, setSearchDevice] = useState("");
   const [columns] = useState([
     {
       title: "Mã thiết bị",
@@ -179,7 +180,13 @@ function ListDevice() {
 
   useEffect(() => {
     if (active === "Tất cả" && connect === "Tất cả") {
-      setDataSource(devices);
+      const filteredDevices = searchDevice
+        ? devices.filter((item: IDevice) =>
+            item.deviceName.toLowerCase().includes(searchDevice.toLowerCase())
+          )
+        : devices;
+
+      setDataSource(filteredDevices);
       return;
     }
 
@@ -201,7 +208,7 @@ function ListDevice() {
           item.statusActive === active && item.statusConnect === connect
       )
     );
-  }, [active, connect, devices]);
+  }, [active, connect, devices,searchDevice]);
 
   return (
     <div className="wrapper_LDevice">
@@ -225,7 +232,11 @@ function ListDevice() {
         </div>
         <div className="search-wrap_LDevice">
           <span className="title_LDevice">Từ khoá</span>
-          <Search placeholder="Nhập từ khóa" />
+          <Search
+            placeholder="Nhập từ khóa"
+            value={searchDevice}
+            onChange={(e) => setSearchDevice(e.target.value)}
+          />
         </div>
       </div>
       <div className="wrap-table_LDevice">

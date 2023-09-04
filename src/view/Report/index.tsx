@@ -144,6 +144,7 @@ const columns: ColumnsType<DataType> = [
 ];
 
 function Report() {
+  
   const [dataSource, setDataSource] = useState<INumerical[]>([]);
   useEffect(() => {
     onSnapshot(collection(db, "numerical"), (snapshot) => {
@@ -161,12 +162,11 @@ function Report() {
   const handleDownload = () => {
     const dataToExport = dataSource.map((item: any) => ({
       "Số thứ tự": item.stt,
-      "Tên dịch vụ": item.serviceName,
+      "Tên dịch vụ": item.service, 
       "Thời gian cấp": convertTimeToString(item.createdAt.toDate()),
       "Tình trạng": item.status,
       "Nguồn cấp": item.resource,
     }));
-
     const ws = XLSX.utils.json_to_sheet(dataToExport);
     const wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, "Report");
@@ -176,7 +176,7 @@ function Report() {
     <div className="wrapper_report">
       <div className="date-picker_report">
         <span className="title_report">Chọn thời gian</span>
-        <DateRangePicker />
+        <DateRangePicker  />
       </div>
       <div className="wrap-content_report">
         <Table columns={columns} rows={dataSource} />

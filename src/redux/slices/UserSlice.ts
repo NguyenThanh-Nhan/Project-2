@@ -123,4 +123,3 @@ export const updateUser = createAsyncThunk(
 );
 
 export default UserSlice;
-

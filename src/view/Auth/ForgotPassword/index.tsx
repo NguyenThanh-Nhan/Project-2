@@ -35,6 +35,7 @@ function ForgotPassword() {
     setError("");
   };
 
+
   const handleResetPass = async () => {
     if (!password || !confirmPass) {
       setError("Các trường dấu * không được bỏ trống!");
